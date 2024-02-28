@@ -6,23 +6,22 @@ import { Link } from 'react-router-dom';
 //=============
 //  Functions
 //=============
-const Home = () => {
-
+const CatGen = () => {
     return (
         <>
             <section>
-                <Link to="CatGen">
-                    <button>Cat</button>
+                <Link to="/">
+                    <button>Start again</button>
                 </Link>
-                <Link to="DogGen">
-                    <button>Dog</button>
-                </Link>
+            </section>
+            <section>
+                <p>I'm the Cat Generator...</p>
             </section>
         </>
     )
 };
 
 //===========
-//  Exports 
+//  Exports
 //===========
-export default Home;
+export default CatGen;
