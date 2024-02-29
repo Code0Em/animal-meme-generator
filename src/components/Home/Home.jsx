@@ -1,16 +1,14 @@
-//===========
-//  Imports
-//===========
+// imports
 import { Link } from 'react-router-dom';
 
-//=============
-//  Functions
-//=============
+// take in chooseClass prop
 const Home = ({ chooseClass }) => {
 
+    // initialise cat and dog classes
     let catClass = "cat";
     let dogClass = "dog";
 
+    // return structured JSX (buttons), the onClicks calls the corresponding prop
     return (
         <>
             <section>
@@ -19,14 +17,12 @@ const Home = ({ chooseClass }) => {
                     <button onClick={() => chooseClass(catClass)}>Cat</button>
                 </Link>
                 <Link to="Generator">
-                <button onClick={() => chooseClass(dogClass)}>Dog</button>
+                    <button onClick={() => chooseClass(dogClass)}>Dog</button>
                 </Link>
             </section>
         </>
     )
 };
 
-//===========
-//  Exports
-//===========
+// exports
 export default Home;

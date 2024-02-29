@@ -1,6 +1,4 @@
-//===========
-//  Imports 
-//===========
+// imports 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
@@ -9,9 +7,6 @@ import Footer from './components/Footer/Footer';
 import './App.css'
 import { useState } from "react";
 
-//=============
-//  Functions
-//=============
 const App = () => {
 
   const [newClass, setNewClass] = useState("");
@@ -33,5 +28,5 @@ const App = () => {
   )
 }
 
-
+// exports
 export default App;
