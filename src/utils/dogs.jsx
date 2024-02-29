@@ -1,5 +1,5 @@
 const apiKey = 'live_js1I9MDcTXDFqs4EQ1NCaHf1c5rasF2iT24oFqHepOKCFKtPXgcHgPDtIV0BG4dz';
-const apiUrl = 'https://api.thecatapi.com/v1/images/search';
+const apiUrl = 'https://api.thedogapi.com/v1/images/search';
 
 function fetchCatImages() {
   return fetch(apiUrl, {
