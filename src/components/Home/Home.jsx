@@ -6,15 +6,20 @@ import { Link } from 'react-router-dom';
 //=============
 //  Functions
 //=============
-const Home = () => {
+const Home = ({ chooseClass }) => {
+
+    let catClass = "cat";
+    let dogClass = "dog";
+
     return (
         <>
             <section>
-                <Link to="CatGen">
-                    <button>Cat</button>
+                <h1>Are you a cat or a dog person?</h1>
+                <Link to="Generator">
+                    <button onClick={() => chooseClass(catClass)}>Cat</button>
                 </Link>
-                <Link to="DogGen">
-                    <button>Dog</button>
+                <Link to="Generator">
+                <button onClick={() => chooseClass(dogClass)}>Dog</button>
                 </Link>
             </section>
         </>

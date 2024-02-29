@@ -1,7 +1,60 @@
+/* ===========
+  NavBar
+=========== */
+.menu {
+  background: rgb(0,149,142) !important;
+  text-align: center;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.ui.menu {
+  box-shadow: 0 4px 4px 0 rgb(1, 119, 113) !important;
+}
+
+/* ===========
+The Meme
+=========== */
+.meme-container {
+  position: relative;
+  text-align: center;
+}
+
+.meme-img {
+  width: 100%;
+}
+
+.meme-top-line {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+}
+
+.meme-bottom-line {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+}
+
+/* ===========================================
+  Testing Purposes Only - Need to be updated
+=========================================== */
+
+.cat {
+  background-image: url(../images/cat-background-test.png);
+}
+
+.dog {
+  background-image: url(../images/dog-background-test.png);
+}
+
+.container {
+  display: flex;
+}
+
 /* The below CSS came from Vite's React template */
 
 #root {
-  max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -39,6 +92,3 @@
   padding: 2em;
 }
 
-.read-the-docs {
-  color: #888;
-}

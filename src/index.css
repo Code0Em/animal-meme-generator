@@ -68,15 +68,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-
-/* Menu/navbar */
-.menu {
-  background: rgb(0,149,142) !important;
-  text-align: center;
-  padding-bottom: 15px;
-  color: white;
-}
-
-.ui.menu {
-box-shadow: 0 4px 4px 0 rgb(1, 119, 113) !important;
-}

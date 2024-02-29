@@ -6,16 +6,13 @@ import { Link } from 'react-router-dom';
 //=============
 //  Functions
 //=============
-const DogGen = () => {
+const Hero = () => {
     return (
         <>
             <section>
                 <Link to="/">
                     <button>Start again</button>
                 </Link>
-            </section>
-            <section>
-                <p>I'm the Dog Generator...</p>
             </section>
         </>
     )
@@ -24,4 +21,4 @@ const DogGen = () => {
 //===========
 //  Exports
 //===========
-export default DogGen;
+export default Hero;
