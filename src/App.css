@@ -5,18 +5,26 @@ body {
 /* ===========
   NavBar
 =========== */
-.menu {
-  background: rgb(179, 206, 187) !important;
-  text-align: center;
-  padding-bottom: 15px;
-  color: white;
+.navbar.navbar {
+  background-color: rgb(179, 206, 187);
+  width: 100%;
+  position: absolute !important;
+  top: 0;
+  margin: 0;
+  padding: 0;
 }
 
-.ui.menu {
-  box-shadow: 0 4px 4px 0 rgb(120, 138, 125) !important;
-  padding-left: 15%;
-  padding-right: 15%;
+.navbar-text {
+  color: white !important;
 }
+
+.navbar-brand img {
+  height: 30px; /* Adjust the height as needed */
+  margin-right: 60px;
+  margin-left: 60px;
+}
+
+
 
 
 /* ===========
@@ -123,7 +131,7 @@ The Meme (this probably need further editing, now we're using bootstrap)
 /* ===========
 Footer
 =========== */
-.ui.container {
+footer {
   position: absolute;
   left: 0;
   right: 0;
@@ -133,5 +141,5 @@ Footer
   padding-top: 15px;
   padding-bottom: 20px;
   background: rgb(179, 206, 187) !important;
-  color: rgb(67, 82, 71)
+  color: rgb(47, 59, 51)
 }
