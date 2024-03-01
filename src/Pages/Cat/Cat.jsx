@@ -1,6 +1,5 @@
 import '../Cat/Cat.css';
 import React, { useState } from 'react';
-import { Card, Input, Image } from 'semantic-ui-react';
 
 function InputOutput() {
     const [topText, setTopText] = useState('');
