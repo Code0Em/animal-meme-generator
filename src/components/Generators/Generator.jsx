@@ -2,23 +2,23 @@
 import React, { useEffect, useState } from 'react';
 import Hero from '../Hero/Hero';
 import Meme from '../Meme/Meme';
+import { fetchAnimalApi } from '../utils/api.jsx';
 
 // take in newClass prop
 const Generator = ({ newClass }) => {
     const [animalImage, setAnimalImage] = useState('');
 
-    // fetchAnimalApi function
-    const fetchAnimalApi = async (animalType) => {
-        const apiUrl = animalType === 'cat' ? 'https://api.thecatapi.com/v1/images/search?limit=1' : 'https://api.thedogapi.com/v1/images/search?limit=1';
-        const response = await fetch(apiUrl);
-        return response;
-    };
-
     // fetch based on the value of newClass (cat or dog), extract the URL from the response
     const fetchAnimalImage = async () => {
-        const response = await fetchAnimalApi(newClass);
-        const data = await response.json();
-        setAnimalImage(data.url);
+        try {
+            const response = await fetchAnimalApi(newClass);
+            const data = await response.json();
+            // REMOVE LOG ON PROD
+            console.log(data);
+            setAnimalImage(data.url);
+        } catch (error) {
+            console.error('Error fetching animal image:', error);
+        }
     };
 
     // fetch a new image when useEffect is triggered

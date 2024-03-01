@@ -1,25 +1,21 @@
 // imports
 import React, { useState, useEffect } from 'react';
+import { catApiUrl, dogApiUrl } from '../utils/constraints.js';
+
+// store API key
+const apiKey = 'live_js1I9MDcTXDFqs4EQ1NCaHf1c5rasF2iT24oFqHepOKCFKtPXgcHgPDtIV0BG4dz';
 
 // take in animalType prop
 const Meme = ({ animalType }) => {
-    // declare component state variables
     const [memeText, setMemeText] = useState({ topLine: "", bottomLine: "" });
     const [image, setImage] = useState('');
     const [loading, setLoading] = useState(true);
 
-    // API key and API calls
-    const apiKey = 'live_js1I9MDcTXDFqs4EQ1NCaHf1c5rasF2iT24oFqHepOKCFKtPXgcHgPDtIV0BG4dz';
-    const catApiUrl = 'https://api.thecatapi.com/v1/images/search';
-    const dogApiUrl = 'https://api.thedogapi.com/v1/images/search';
-
     // useEffect hook fetches the image URL when the animalType prop changes (to cat or dog)
     useEffect(() => {
         const apiUrl = animalType === 'cat' ? catApiUrl : dogApiUrl;
-
         // set to true on initialisation
         setLoading(true);
-
         fetch(apiUrl, {
             headers: { 'x-api-key': apiKey }
         })
@@ -32,7 +28,6 @@ const Meme = ({ animalType }) => {
             .then(data => {
                 if (data.length > 0) {
                     setImage(data[0].url);
-                    // toggle to false once image has loaded
                     setLoading(false);
                 }
             })
@@ -67,7 +62,6 @@ const Meme = ({ animalType }) => {
                     onChange={handleInputChange}
                     placeholder="Enter bottom line of meme" />
             </form>
-
             {loading ? (
                 <p>Loading...</p>
             ) : (
