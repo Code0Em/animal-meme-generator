@@ -4,7 +4,6 @@ import Home from './components/Home/Home';
 import Navbar from './components/Navbar/Navbar';
 import Generator from './components/Generators/Generator';
 import Footer from './components/Footer/Footer';
-import Cat from './Pages/Cat/Cat.jsx';
 import './App.css'
 import { useState } from "react";
 
