@@ -1,16 +1,21 @@
+body { margin: 0; }
+
 /* ===========
   NavBar
 =========== */
 .menu {
-  background: rgb(0,149,142) !important;
+  background: rgb(179, 206, 187) !important;
   text-align: center;
   padding-bottom: 15px;
   color: white;
 }
 
 .ui.menu {
-  box-shadow: 0 4px 4px 0 rgb(1, 119, 113) !important;
+  box-shadow: 0 4px 4px 0 rgb(120, 138, 125) !important;
+  padding-left: 15%;
+  padding-right: 15%;
 }
+
 
 /* ===========
 The Meme
@@ -66,9 +71,11 @@ The Meme
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -77,6 +84,7 @@ The Meme
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
@@ -92,3 +100,18 @@ The Meme
   padding: 2em;
 }
 
+/* ===========
+Footer
+=========== */
+.ui.container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width:  100% !important;
+  height: 45px;
+  padding-top: 15px;
+  padding-bottom: 20px;
+  background: rgb(179, 206, 187) !important;
+  color: rgb(67, 82, 71)
+}
