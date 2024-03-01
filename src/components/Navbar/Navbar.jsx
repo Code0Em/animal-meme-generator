@@ -2,26 +2,18 @@
 //  Functions
 //=============
 
+import React from 'react';
+
 const Home = () => {
     return (
         <>
-            <div className="ui top text fixed menu">
-                    <div className="item">
-                        <img src="./images/paw-solid.svg"></img>
-                    </div>
-                    <h1>Bark vs. Meow: The Battle for the Couch </h1>
-                    <div className="item">
-                        <img src="./images/paw-solid.svg"></img>
-                    </div>
-                {/* <a class="item">Cat API</a>
-                <a class="item">Dog API</a>
-                <a class="item">Contact Us</a> */}
-            </div>
+            <nav className="navbar navbar-expand-lg fixed-top">
+                <div className="container-fluid">
+                    <h1 className="navbar-text text-light"><img src="./images/paw-solid.svg" alt="logo" style={{height: '30px'}}/>   Bark vs. Meow: The Battle for the Couch   <img src="./images/paw-solid.svg" alt="logo" style={{height: '30px'}} /></h1>
+                </div>
+            </nav>
         </>
-    )
+    );
 };
 
-//===========
-//  Exports 
-//===========
 export default Home;
