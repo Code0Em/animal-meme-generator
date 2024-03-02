@@ -27,7 +27,7 @@ h2 {
   background-size: cover;
   background-image: url('./../../../images/pets-hero.png');
   background-repeat: no-repeat;
-  background-position: bottom;
+  background-position: center;
   position: relative;
   margin-bottom: 0;
   margin-left: 0;
