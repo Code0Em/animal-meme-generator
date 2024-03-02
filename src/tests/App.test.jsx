@@ -16,7 +16,7 @@ it('App component renders cat and dog buttons', () => {
     expect(dogBtn && catBtn).toBeDefined();
 });
 
-// #3 Tests that when users clicks Dog or Cat button, the meme input fields (for user to add meme text) are rendered (WORKING).
+// #3 Tests that when users clicks Dog or Cat button, the meme input fields (for user to add meme text) are rendered.
 it('Clicking cat or dog button renders meme input fields', async () => {
     render(<App />);
 
