@@ -21,9 +21,11 @@ const Generator = ({ newClass }) => {
         }
     };
 
-    // fetch a new image when useEffect is triggered
+    // check if newClass has changed before calling API
     useEffect(() => {
-        fetchAnimalImage();
+        if (newClass) {
+            fetchAnimalImage();
+        }
     }, [newClass]);
 
     // return structured JSX container
