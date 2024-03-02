@@ -18,6 +18,7 @@ const Meme = ({ animalType }) => {
     const [textColor, setTextColor] = useState('meme-text-dark')
     const [btnTheme, setBtnTheme] = useState('light')
     const [btnText, setBtnText] = useState('Light')
+    const [savedMemes, setSavedMemes] = useState([]);
 
     // useEffect hook fetches the image URL when the animalType prop changes (to cat or dog)
     useEffect(() => {
@@ -52,17 +53,44 @@ const Meme = ({ animalType }) => {
         setMemeText(prev => ({
             ...prev,
             [name]: value,
-}));
-// memeText local storage
-localStorage.setItem(name, value);
-};
+        }));
+        // memeText local storage
+        localStorage.setItem(name, value);
+    };
 
-// Change meme text color on click
-const handleColorChange = () => {
-setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
-setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
-setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
-}
+    // Change meme text color on click
+    const handleColorChange = () => {
+        setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
+        setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
+        setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
+    }
+
+    useEffect(() => {
+        const storedTopLine = localStorage.getItem('topLine');
+        const storedBottomLine = localStorage.getItem('bottomLine');
+        if (storedTopLine && storedBottomLine) {
+            setMemeText({ topLine: storedTopLine, bottomLine: storedBottomLine });
+        }
+    }, []);
+
+    const handleSaveMeme = () => {
+        const newMeme = { topLine: memeText.topLine, bottomLine: memeText.bottomLine };
+        setSavedMemes(prevMemes => [...prevMemes, newMeme]);
+        localStorage.setItem('savedMemes', JSON.stringify([...savedMemes, newMeme]));
+    };
+
+    const handleReloadMeme = (savedMeme) => {
+        setMemeText(savedMeme);
+        localStorage.setItem('topLine', savedMeme.topLine);
+        localStorage.setItem('bottomLine', savedMeme.bottomLine);
+    };
+
+    useEffect(() => {
+        const storedMemes = localStorage.getItem('savedMemes');
+        if (storedMemes) {
+            setSavedMemes(JSON.parse(storedMemes));
+        }
+    }, []);
 
 
     // return structured JSX - image currently restricted to 300px width (this can be changed), also returns cat breed as URL link to Wiki page
@@ -103,6 +131,7 @@ setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
             {/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
             <div>
                 <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
+                <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
             </div>
 
             {loading ? (
@@ -119,6 +148,16 @@ setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
                     </p>
                 </section>
             )}
+
+            {/* reload button for saved memes */}
+            <div>
+                {savedMemes.map((savedMeme, index) => (
+                    <Button key={index} onClick={() => handleReloadMeme(savedMeme)}>
+                        Reload Meme {index + 1}
+                    </Button>
+                ))}
+            </div>
+
         </>
     );
 };
