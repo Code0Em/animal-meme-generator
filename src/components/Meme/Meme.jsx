@@ -12,7 +12,7 @@ const Meme = ({ animalType }) => {
     const [image, setImage] = useState('');
     const [loading, setLoading] = useState(true);
     // States for meme text colour change (inc the button)
-    const [textColor, setTextColor] = useState('black')
+    const [textColor, setTextColor] = useState('meme-text-dark')
     const [btnTheme, setBtnTheme] = useState('light')
     const [btnText, setBtnText] = useState('Light')
 
@@ -50,7 +50,7 @@ const Meme = ({ animalType }) => {
 
     // Change meme text color on click
     const handleColorChange = () => {
-        setTextColor(textColor === 'black' ? 'white' : 'black');
+        setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
         setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
         setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
     }
@@ -86,8 +86,8 @@ const Meme = ({ animalType }) => {
                 <section className="meme-container">
                     <img src={image} className="meme-img" alt={`${animalType} Meme`} style={{ maxWidth: '300px' }} />
                     {/* Includes dynamic text color */}
-                    <p className="meme-top-line" style={{ color: textColor }}>{memeText.topLine}</p>
-                    <p className="meme-bottom-line" style={{ color: textColor }}>{memeText.bottomLine}</p>
+                    <p className={"meme-top-line " + textColor}>{memeText.topLine}</p>
+                    <p className={"meme-bottom-line " + textColor}>{memeText.bottomLine}</p>
                 </section>
             )}
         </>
