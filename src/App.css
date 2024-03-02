@@ -47,7 +47,15 @@ The Meme (this probably need further editing, now we're using bootstrap)
   position: absolute;
   top: 8px;
   left: 45%;
-  color: #000;
+}
+
+.meme-bottom-line {
+  position: absolute;
+  bottom: 8px;
+  left: 45%;
+}
+
+.meme-text-light {
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
@@ -58,19 +66,15 @@ The Meme (this probably need further editing, now we're using bootstrap)
     1px 1px 5px #000;
 }
 
-.meme-bottom-line {
-  position: absolute;
-  bottom: 8px;
-  left: 45%;
-  color: #000;
+.meme-text-dark {
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
-  color: white;
+  color: black;
   letter-spacing: 4px;
-  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-    -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000,
-    1px 1px 5px #000;
+  text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+    -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white,
+    1px 1px 5px white;
 }
 
 /* ===========================================
