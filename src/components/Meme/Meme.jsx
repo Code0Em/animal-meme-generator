@@ -58,7 +58,7 @@ const Meme = ({ animalType }) => {
     // return structured JSX - image currently restricted to 300px width (this can be changed)
     return (
         <>
-            <form>
+            <form className ='p-5'>
                 <input
                     type="text"
                     id="topLine"

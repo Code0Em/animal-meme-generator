@@ -42,7 +42,6 @@ h2 {
   bottom: 0;
   left: 0;
   right: 0;
-
 }
 
 .hero * {
@@ -93,8 +92,28 @@ margin-top: 10px;
 border-radius: 50px;
 border: none;
 margin-bottom: 10px;
-
 font-size: x-large;
+padding: 0.6em 1.2em;
+border: 1px solid transparent;
+
+font-weight: 500;
+font-family: inherit;
+background-color: #1a1a1a;
+cursor: pointer;
+transition: border-color 0.25s;
+}
+
+
+#btn-cat:hover,
+#btn-dog:hover, {
+  border-color: #646cff;
+}
+
+#btn-cat:focus,
+#btn-cat:focus-visible,
+#btn-dog:focus,
+#btn-dog:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
 }
 
 #btn-dog {
@@ -109,32 +128,8 @@ font-size: x-large;
   color: white;
 }
 
-#text {
-width: 100%;
-min-height: 300px
+
+
+#restart {
+  padding-top: 50px;
 }
-
-
-/* #contact-h2 {
-font-family: Alegreya, serif;
-font-weight:  bold;
-margin-left: 75px;
-margin-top: 30px;
-} */
-
-/* #button {
-color: white;
-margin-top: 10px;
-border: none;
-border-radius: 20px;
-background-color: orange;
-
-} */
-
-#btn:hover { 
-background-color: dodgerblue;
-text-decoration: none;
-border: none;
-
-} 
-

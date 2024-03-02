@@ -32,6 +32,7 @@ The Meme (this probably need further editing, now we're using bootstrap)
 .meme-container {
   position: relative;
   text-align: center;
+  margin-top: 30px;
 }
 
 .meme-img {
@@ -77,7 +78,8 @@ The Meme (this probably need further editing, now we're using bootstrap)
 }
 
 .dog {
-  background-image: url(../images/dog-background-test.png);
+  /* background-image: url(../images/dog-background-test.png); */
+  background-color: cornflowerblue;
 }
 
 .container {
@@ -86,9 +88,8 @@ The Meme (this probably need further editing, now we're using bootstrap)
 
 /* The below CSS came from Vite's React template */
 
-#root {
+/* #root {
   margin: 0 auto;
-
   text-align: center;
 }
 
@@ -125,7 +126,7 @@ The Meme (this probably need further editing, now we're using bootstrap)
 
 .card {
   padding: 2em;
-}
+} */
 
 /* ===========
 Footer
@@ -140,5 +141,5 @@ footer {
   padding-top: 15px;
   padding-bottom: 20px;
   background: rgb(179, 206, 187) !important;
-  color: rgb(47, 59, 51)
+  color: rgb(47, 59, 51)  
 }
