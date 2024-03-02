@@ -15,11 +15,11 @@
 
 	font-weight: 500;
 	font-family: inherit;
-	background-color: #1a1a1a;
+	
 	cursor: pointer;
 	transition: border-color 0.25s;
 
-	background-color: rgb(179,206,187);
+	background-color:  #32658A !important;
 	color: white;
 }
 
