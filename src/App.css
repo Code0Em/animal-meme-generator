@@ -1,5 +1,8 @@
 body {
   margin: 0;
+  background-color: cornflowerblue !important;
+  display: flex;
+  align-items: center;
 }
 
 /* ===========
@@ -16,6 +19,7 @@ body {
 
 .navbar-text {
   color: white !important;
+  text-align: center !important; /* Center text horizontally */
 }
 
 .navbar-brand img {
@@ -70,20 +74,68 @@ The Meme (this probably need further editing, now we're using bootstrap)
 }
 
 /* ===========================================
-  Testing Purposes Only - Need to be updated
+            Cat and Dog backgrounds
 =========================================== */
 
 .cat {
   background-image: url(../images/cat-background-test.png);
-}
-
-.dog {
-  /* background-image: url(../images/dog-background-test.png); */
   background-color: cornflowerblue;
 }
 
+.dog {
+  background-image: url(../images/dog-background-test.png);
+  background-color: cornflowerblue;
+}
+
+/* ===========================================
+            Meme form ard
+=========================================== */
+
+/* 
+.meme-card {
+  background-color: rgb(100,149,237) !important;
+} */
+
+.meme-card {
+  background-color: rgba(112, 145, 207, 0.6) !important;
+  color: white !important;
+}
+
+.meme-card .card-header {
+  border: none !important;
+}
+
+.top-form {
+  margin-bottom: 10px; 
+}
+
+.bottom-form {
+  margin-top: 10px; 
+}
+
+.form-subheading {
+  margin-bottom: 5px; 
+  text-align: center; 
+}
+
+
+/* ===========================================
+            Restart button
+=========================================== */
+
+
+
+/* ====================================================================================== */
+
+
+/* ===========================================
+  Testing Purposes Only - Need to be updated
+=========================================== */
+
 .container {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* The below CSS came from Vite's React template */
@@ -137,9 +189,18 @@ footer {
   right: 0;
   bottom: 0;
   width: 100% !important;
-  height: 45px;
+  height: 150px;
+  /* height: 100px; */
   padding-top: 15px;
   padding-bottom: 20px;
   background: rgb(179, 206, 187) !important;
-  color: rgb(47, 59, 51)  
+  color: rgb(47, 59, 51);
+  justify-content: center;
+  align-items: flex-end; 
+  display: flex;
+}
+
+footer p {
+  text-align: center;
+  margin: 0;
 }

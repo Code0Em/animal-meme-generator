@@ -12,7 +12,7 @@ const Hero = () => {
         <>
             <section className ='p-5' id="restart">
                 <Link to="/">
-                    <button>Start again</button>
+                    <button type="button" className="btn" id="btn-restart">Start again</button>
                 </Link>
             </section>
         </>
