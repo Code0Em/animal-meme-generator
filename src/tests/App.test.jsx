@@ -2,12 +2,12 @@ import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import App from '../App';
 
-// #1 Tests that App component renders without throwing an error (WORKING).
+// #1 Tests that App component renders without throwing an error.
 it('App component renders without error', () => {
     render(<App />);
 });
 
-// #2: Tests that cat and dog buttons render in App component (WORKING).
+// #2: Tests that cat and dog buttons render in App component.
 it('App component renders cat and dog buttons', () => {
     render(<App />);
     const dogBtn = screen.getByRole('button', { name: 'Dog' });
@@ -21,7 +21,7 @@ it('Clicking cat or dog button renders meme input fields', async () => {
     render(<App />);
 
     await userEvent.click(
-        screen.getByRole('button', { name: 'Dog' } || {name: 'Cat'})
+        screen.getByRole('button', { name: /dog/i } || { name: /cat/i })
     );
 
     // Dev purposes only: called screen.debug to see structure of the DOM when click event is triggered (to identify value for memeInputs).
@@ -32,4 +32,20 @@ it('Clicking cat or dog button renders meme input fields', async () => {
     const memeInputs = screen.getAllByRole('textbox', { name: '' });
 
     expect(memeInputs).toBeDefined();
+});
+
+// #4 Tests that when users clicks Start Again button, the Dog and Cat buttons are rendered.
+it('Clicking start again button, renders cat and dog buttons', async () => {
+    render(<App />);
+
+    await userEvent.click(
+        screen.getByRole('button', { name: /start again/i })
+    );
+
+     // Dev purposes only:
+    // screen.debug();
+    
+    const animalBtn = screen.getByRole('button', { name: /dog/i } && { name: /cat/i })
+
+    expect(animalBtn).toBeDefined();
 });
