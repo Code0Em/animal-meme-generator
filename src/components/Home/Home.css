@@ -31,6 +31,7 @@ h2 {
   position: relative;
   margin-bottom: 0;
   margin-left: 0;
+  z-index: 1;
 }
 
 .hero::after {
@@ -126,10 +127,4 @@ transition: border-color 0.25s;
 #btn-cat {
   background-color: orange;
   color: white;
-}
-
-
-
-#restart {
-  padding-top: 50px;
 }

@@ -1,7 +1,7 @@
 // imports
 import React, { useState, useEffect } from 'react';
 import { catApiUrl, dogApiUrl } from '../utils/constraints.js';
-import Button from 'react-bootstrap/Button';
+import { Button, Card, Form } from 'react-bootstrap';
 
 // store API key
 const apiKey = 'live_js1I9MDcTXDFqs4EQ1NCaHf1c5rasF2iT24oFqHepOKCFKtPXgcHgPDtIV0BG4dz';
@@ -58,26 +58,41 @@ const Meme = ({ animalType }) => {
     // return structured JSX - image currently restricted to 300px width (this can be changed)
     return (
         <>
-            <form className ='p-5'>
-                <input
-                    type="text"
-                    id="topLine"
-                    value={memeText.topLine}
-                    name="topLine"
-                    onChange={handleInputChange}
-                    placeholder="Enter top line of meme" />
-                <input
-                    type="text"
-                    id="bottomLine"
-                    value={memeText.bottomLine}
-                    name="bottomLine"
-                    onChange={handleInputChange}
-                    placeholder="Enter bottom line of meme" />
-            </form>
+            <Card className="meme-card m-3">
+                <Card.Header>
+                    <h5 className="text-center">So fur, so good...</h5>
+                </Card.Header>
+                <Card.Body>
+                    <Form className="p-3 top-form">
+                        <h6 className="form-subheading text-center">Top Text</h6>
+                        <Form.Group controlId="topLine">
+                            <Form.Control
+                                type="text"
+                                value={memeText.topLine}
+                                name="topLine"
+                                onChange={handleInputChange}
+                                placeholder="Enter top line of meme"
+                            />
+                        </Form.Group>
+                    </Form>
+                    <Form className="p-3 bottom-form">
+                        <h6 className="form-subheading">Bottom Text</h6>
+                        <Form.Group controlId="bottomLine">
+                            <Form.Control
+                                type="text"
+                                value={memeText.bottomLine}
+                                name="bottomLine"
+                                onChange={handleInputChange}
+                                placeholder="Enter bottom line of meme"
+                            />
+                        </Form.Group>
+                    </Form>
+                </Card.Body>
+            </Card>
 
             {/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
             <div>
-            <Button variant={btnTheme} onClick={handleColorChange}>{btnText} Text</Button>{' '}
+                <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
             </div>
 
             {loading ? (
