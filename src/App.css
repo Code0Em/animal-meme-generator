@@ -26,7 +26,6 @@ body {
 
 
 
-
 /* ===========
 The Meme (this probably need further editing, now we're using bootstrap)
 =========== */
@@ -89,7 +88,7 @@ The Meme (this probably need further editing, now we're using bootstrap)
 
 #root {
   margin: 0 auto;
-  padding: 2rem;
+
   text-align: center;
 }
 

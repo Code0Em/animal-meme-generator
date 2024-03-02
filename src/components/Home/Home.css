@@ -1,0 +1,140 @@
+/* body {
+  text-align: center;
+} */
+
+.hero h1 {
+  text-align: center;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 100px;
+  color: white;
+
+  /* padding-top: 80px; */
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 140px;
+  /* margin-top: 12px; */
+  padding-top: 12px;
+}
+
+.hero {
+  height: 85vh;
+  width: 100vw;
+  background-size: cover;
+  background-image: url('./../../../images/pets-hero.png');
+  background-repeat: no-repeat;
+  background-position: bottom;
+  position: relative;
+  margin-bottom: 0;
+  margin-left: 0;
+}
+
+.hero::after {
+  content: "";
+  display: block;
+  opacity: .4;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+.hero * {
+  position: relative;
+  z-index: 2;
+}
+
+.hero h2 {
+  font-weight: 300;
+  font-size: 22px;
+} */
+
+
+@media screen and (max-width: 550px) {
+  .hero h1 {
+    font-size: 55px;
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1437px) {
+  .hero h1 {
+    font-size: 100px;
+    padding-top: 100px;
+  }
+
+  .hero h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 1155px) {
+  .hero h1 {
+    font-size: 75px;
+    padding-top: 150px;
+  }
+  .hero h2 {
+    font-size: 20px;
+  }
+}
+
+
+
+#btn-cat,
+#btn-dog {
+width:fit-content;
+margin-top: 10px;
+border-radius: 50px;
+border: none;
+margin-bottom: 10px;
+
+font-size: x-large;
+}
+
+#btn-dog {
+  background-color: yellow;
+  color: darkblue;
+  margin-left: 60px;
+  }
+
+
+#btn-cat {
+  background-color: orange;
+  color: white;
+}
+
+#text {
+width: 100%;
+min-height: 300px
+}
+
+
+/* #contact-h2 {
+font-family: Alegreya, serif;
+font-weight:  bold;
+margin-left: 75px;
+margin-top: 30px;
+} */
+
+/* #button {
+color: white;
+margin-top: 10px;
+border: none;
+border-radius: 20px;
+background-color: orange;
+
+} */
+
+#btn:hover { 
+background-color: dodgerblue;
+text-decoration: none;
+border: none;
+
+} 
+
