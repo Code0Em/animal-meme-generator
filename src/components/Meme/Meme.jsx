@@ -65,26 +65,34 @@ const Meme = ({ animalType }) => {
         setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
     }
 
+    //  load saved memeText from local storage
     useEffect(() => {
+        // gets memeText from local storage
         const storedTopLine = localStorage.getItem('topLine');
         const storedBottomLine = localStorage.getItem('bottomLine');
+        // set memeText if 'TopLine & BottomLine' exsists in local storage 
         if (storedTopLine && storedBottomLine) {
             setMemeText({ topLine: storedTopLine, bottomLine: storedBottomLine });
         }
     }, []);
 
+    // save the current meme to local storage 
     const handleSaveMeme = () => {
-        const newMeme = { topLine: memeText.topLine, bottomLine: memeText.bottomLine };
+        const newMeme = { topLine: memeText.topLine, bottomLine: memeText.bottomLine, imageUrl: image }; // Store image URL along with meme text
         setSavedMemes(prevMemes => [...prevMemes, newMeme]);
+        // update local storage with the updated savedMemes array
         localStorage.setItem('savedMemes', JSON.stringify([...savedMemes, newMeme]));
     };
 
+    // reload a saved meme by setting the memeText and imageUrl from a saved meme
     const handleReloadMeme = (savedMeme) => {
-        setMemeText(savedMeme);
+        setMemeText({ topLine: savedMeme.topLine, bottomLine: savedMeme.bottomLine });
+        setImage(savedMeme.imageUrl);
         localStorage.setItem('topLine', savedMeme.topLine);
         localStorage.setItem('bottomLine', savedMeme.bottomLine);
     };
 
+    // load saved memes from local storage 
     useEffect(() => {
         const storedMemes = localStorage.getItem('savedMemes');
         if (storedMemes) {
