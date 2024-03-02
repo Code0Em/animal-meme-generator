@@ -7,8 +7,9 @@
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 100px;
+  font-size: 90px;
   color: white;
+  /* color: black; */
   padding-top: 200px;
 
 
@@ -27,7 +28,7 @@ h2 {
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  background-image: url('./../../../images/pets-landing.png');
+  background-image: url('./../../../images/pets-landing05.png');
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -53,10 +54,6 @@ h2 {
   z-index: 2;
 }
 
-.hero h2 {
-  font-weight: 300;
-  font-size: 22px;
-} */
 
 
 @media screen and (max-width: 550px) {
@@ -68,7 +65,7 @@ h2 {
 
 @media screen and (max-width: 1437px) {
   .hero h1 {
-    font-size: 100px;
+    font-size: 85px;
     padding-top: 100px;
   }
 
@@ -99,7 +96,6 @@ margin-bottom: 10px;
 font-size: x-large;
 padding: 0.6em 1.2em;
 border: 1px solid transparent;
-
 font-weight: 500;
 font-family: inherit;
 background-color: #1a1a1a;
@@ -109,8 +105,10 @@ transition: border-color 0.25s;
 
 
 #btn-cat:hover,
-#btn-dog:hover, {
+#btn-dog:hover {
   border-color: #646cff;
+  background-color: yellow; 
+  color: blue;
 }
 
 #btn-cat:focus,
@@ -121,15 +119,17 @@ transition: border-color 0.25s;
 }
 
 #btn-dog {
-  background-color: yellow;
-  color: darkblue;
+  background-color: orange;
+  color: white;
   margin-left: 60px;
+
   }
 
 
 #btn-cat {
-  background-color: orange;
+  background-color: #FF5757;
   color: white;
+  margin-right: 100px;
 }
 
 

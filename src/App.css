@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background-color: cornflowerblue !important;
+  background-color: #A9CBE4!important;
   display: flex;
   align-items: center;
 }
@@ -9,7 +9,7 @@ body {
   NavBar
 =========== */
 .navbar.navbar {
-  background-color: rgb(179, 206, 187);
+  background-color: #32658A;
   width: 100%;
   position: absolute !important;
   top: 0;
@@ -197,8 +197,8 @@ footer {
   /* height: 100px; */
   padding-top: 15px;
   padding-bottom: 20px;
-  background: rgb(179, 206, 187) !important;
-  color: rgb(47, 59, 51);
+  background-color: #32658A !important;
+  color: white !important;
   justify-content: center;
   align-items: flex-end; 
   display: flex;
