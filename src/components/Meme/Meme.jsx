@@ -52,15 +52,18 @@ const Meme = ({ animalType }) => {
         setMemeText(prev => ({
             ...prev,
             [name]: value,
-        }));
-    };
+}));
+// memeText local storage
+localStorage.setItem(name, value);
+};
 
-    // Change meme text color on click
-    const handleColorChange = () => {
-        setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
-        setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
-        setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
-    }
+// Change meme text color on click
+const handleColorChange = () => {
+setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
+setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
+setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
+}
+
 
     // return structured JSX - image currently restricted to 300px width (this can be changed), also returns cat breed as URL link to Wiki page
     return (
