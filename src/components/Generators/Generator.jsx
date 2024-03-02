@@ -13,8 +13,6 @@ const Generator = ({ newClass }) => {
         try {
             const response = await fetchAnimalApi(newClass);
             const data = await response.json();
-            // REMOVE LOG ON PROD
-            console.log(data);
             setAnimalImage(data.url);
         } catch (error) {
             console.error('Error fetching animal image:', error);
