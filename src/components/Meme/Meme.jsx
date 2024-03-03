@@ -11,10 +11,12 @@ const apiKeyDog = 'live_TzTzfke2nEbQT78jBaONdRuAJuwKAvpPvtQGKSpcLFgRdytWa1ggIeWu
 
 // take in animalType prop
 const Meme = ({ animalType }) => {
+    // state variables
     const [memeText, setMemeText] = useState({ topLine: "", bottomLine: "" });
     const [image, setImage] = useState('');
     const [breed, setBreed] = useState('');
     const [breedWikiUrl, setBreedWikiUrl] = useState('');
+    const [temperament, setTemperament] = useState('');
     const [loading, setLoading] = useState(true);
     // States for meme text colour change (inc the button)
     const [textColor, setTextColor] = useState('meme-text-dark')
@@ -38,11 +40,11 @@ const Meme = ({ animalType }) => {
                 return response.json();
             })
             .then(data => {
-                console.log(data);
                 if (data.length > 0) {
                     setImage(data[0].url);
                     setBreed(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].name : '');
                     setBreedWikiUrl(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].wikipedia_url : '');
+                    setTemperament(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].temperament : ''); // Set temperament
                     setLoading(false);
                 }
             })
@@ -162,12 +164,18 @@ const Meme = ({ animalType }) => {
                                 <p className="text-center">Anything is paw-sible!</p>
                             ) : (
                                 <section className="meme-container">
-                                    <img src={image} className="meme-img" alt={`${animalType} Meme`}/>
+                                    <img src={image} className="meme-img" alt={`${animalType} Meme`} />
                                     <p className={"meme-top-line " + textColor}>{memeText.topLine}</p>
                                     <p className={"meme-bottom-line " + textColor}>{memeText.bottomLine}</p>
                                     <p>
                                         {breed && (
-                                            <a href={breedWikiUrl} target="_blank" rel="noopener noreferrer">{breed}</a>
+                                            <>
+                                                I am a <strong>{breed}</strong>
+                                                {animalType === 'cat' && breedWikiUrl && (
+                                                    <> (<a href={breedWikiUrl} target="_blank" rel="noopener noreferrer">link</a>)</>
+                                                )}
+                                                , my temperament is <em>{temperament}</em>
+                                            </>
                                         )}
                                     </p>
                                 </section>
@@ -192,8 +200,8 @@ const Meme = ({ animalType }) => {
                     </Col>
                 </Row>
             </Container>
-            
-        
+
+
         </>
     );
 };
