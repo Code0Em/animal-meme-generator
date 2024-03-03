@@ -102,6 +102,10 @@ const Meme = ({ animalType }) => {
         }
     }, []);
 
+    // clear input fields when page is refreshed / start again button is pressed
+    useEffect(() => {
+        setMemeText({ topLine: "", bottomLine: "" });
+    }, []);
 
     // return structured JSX - image currently restricted to 300px width (this can be changed), also returns cat breed as URL link to Wiki page
     return (
