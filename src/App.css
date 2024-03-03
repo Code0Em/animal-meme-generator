@@ -57,49 +57,54 @@ Meme Wrapper - Overall Container
 
 
 /* ===========
-The Meme (this probably need further editing, now we're using bootstrap)
+The Meme
 =========== */
+/* width of meme container must not exceed parent container. text is aligned to the center */
 .meme-container {
   position: relative;
   text-align: center;
   margin-top: 30px;
+  max-width: 100%;
 }
 
+/* meme text positioned relative to image */
 .meme-img {
-  width: auto;
+  width: 100%;
+  height: auto;
   border-radius: 2%;
-  max-height: 300px;
+  position: relative;
 }
 
-.meme-top-line {
-  position: absolute;
-  top: 8px;
-  left: 45%;
-}
-
+/* top and bottom lines of meme text positioned absolute */
+.meme-top-line,
 .meme-bottom-line {
   position: absolute;
-  bottom: 8px;
-  left: 45%;
-}
-
-.meme-text-light {
+  width: 100%;
+  left: 0;
+  text-align: center;
   font-family: impact, sans-serif;
   font-size: 2em;
   text-transform: uppercase;
-  color: white;
   letter-spacing: 4px;
+}
+
+.meme-top-line {
+  top: 8%;
+}
+
+.meme-bottom-line {
+  bottom: 8%;
+}
+
+.meme-text-light {
+  color: white;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
     -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000,
     1px 1px 5px #000;
 }
 
 .meme-text-dark {
-  font-family: impact, sans-serif;
-  font-size: 2em;
-  text-transform: uppercase;
   color: black;
-  letter-spacing: 4px;
   text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
     -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white,
     1px 1px 5px white;
