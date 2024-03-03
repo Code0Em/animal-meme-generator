@@ -86,6 +86,8 @@ h2 {
 
 
 
+
+
 #btn-cat,
 #btn-dog {
 width:fit-content;
@@ -96,19 +98,19 @@ margin-bottom: 10px;
 font-size: x-large;
 padding: 0.6em 1.2em;
 border: 1px solid transparent;
-background-color: #1a1a1a;
-cursor: pointer;
-transition: border-color 0.25s;
 font-weight: 500;
 font-family: inherit;
+transition: border-color 0.25s;
+color: darkblue;
+
 }
 
 
 #btn-cat:hover,
-#btn-dog:hover {
+#btn-dog:hover, {
   border-color: #646cff;
-  background-color: yellow; 
-  color: blue;
+  
+
 }
 
 #btn-cat:focus,
@@ -119,21 +121,14 @@ font-family: inherit;
 }
 
 #btn-dog {
-  background-color: orange;
-  color: white;
+  background-color: yellow;
+  cursor: url(http://www.zingerbugimages.com/cursors/paws1.ani), url(http://www.zingerbug.com/cursors/cursors/paws1.gif), progress !important;
   margin-left: 60px;
-
   }
 
 
 #btn-cat {
-  background-color: #FF5757;
-  color: white;
-  margin-right: 100px;
+  background-color: orange;
+  cursor: url(http://www.zingerbugimages.com/cursors/catscratch2.ani), url(http://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
 }
 
-
-
-#restart {
-  padding-top: 50px;
-}
