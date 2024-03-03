@@ -96,11 +96,11 @@ margin-bottom: 10px;
 font-size: x-large;
 padding: 0.6em 1.2em;
 border: 1px solid transparent;
-font-weight: 500;
-font-family: inherit;
 background-color: #1a1a1a;
 cursor: pointer;
 transition: border-color 0.25s;
+font-weight: 500;
+font-family: inherit;
 }
 
 

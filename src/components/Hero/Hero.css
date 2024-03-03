@@ -1,6 +1,13 @@
 #restart {
 	position: relative;
-	margin-top: 50px;
+	padding: 50px;
+	/* background-color: #FFDE59; */
+	width: 100vw;
+	height: 100px;
+	margin-top: 0px;
+	/* justify-content: left;
+  align-items: start; 
+  display: flex; */
 }
 
 #btn-restart {
@@ -8,21 +15,16 @@
 	margin-top: 10px;
 	border-radius: 50px;
 	border: none;
-	margin-bottom: 10px;
+	/* margin-bottom: 10px; */
 	font-size: x-large;
 	padding: 0.6em 1.2em;
 	border: 1px solid transparent;
-
 	font-weight: 500;
 	font-family: inherit;
-	
 	cursor: pointer;
 	transition: border-color 0.25s;
-
-	background-color:  #32658A !important;
+	background-color:  #32658A; !important;
 	color: white;
 }
 
-#restart {
-	padding-top: 50px;
 }
