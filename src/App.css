@@ -22,7 +22,7 @@ body {
 
 .navbar-text {
   color: white !important;
-  text-align: center !important; /* Center text horizontally */
+  text-align: center !important;
 }
 
 .navbar-brand img {
@@ -57,6 +57,7 @@ The Meme (this probably need further editing, now we're using bootstrap)
 
 .meme-img {
   width: auto;
+  border-radius: 2%;
 }
 
 .meme-top-line {
@@ -92,6 +93,17 @@ The Meme (this probably need further editing, now we're using bootstrap)
     -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white,
     1px 1px 5px white;
 }
+
+
+/* ===========================================
+Storage - meme card and the storage buttons
+=========================================== */
+
+#storage, #storage.card {
+  border: none !important;
+}
+
+
 
 /* ===========================================
             Cat and Dog backgrounds
@@ -137,11 +149,6 @@ The Meme (this probably need further editing, now we're using bootstrap)
   margin-bottom: 5px; 
   text-align: center; 
 }
-
-
-/* ===========================================
-            Restart button
-=========================================== */
 
 
 

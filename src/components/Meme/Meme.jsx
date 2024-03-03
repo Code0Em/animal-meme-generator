@@ -153,7 +153,7 @@ const Meme = ({ animalType }) => {
                 <Col>
                     <Card id='storage'>
                     {loading ? (
-                        <p>Loading...</p>
+                        <p className="text-center">Anything is paw-sible!</p>
                     ) : (
                         <section className="meme-container">
                             <img src={image} className="meme-img" alt={`${animalType} Meme`} style={{ maxWidth: '300px' }} />
@@ -174,10 +174,10 @@ const Meme = ({ animalType }) => {
             {/* reload button for saved memes */}
             <Row>
                 <Col>
-                    <Card>
+                    <Card id="storage">
                     <div>
                         {savedMemes.map((savedMeme, index) => (
-                            <Button key={index} onClick={() => handleReloadMeme(savedMeme)}>
+                            <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
                                 Reload Meme {index + 1}
                             </Button>
                         ))}
