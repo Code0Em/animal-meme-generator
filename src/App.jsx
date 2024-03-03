@@ -23,6 +23,7 @@ const App = () => {
         <Route index element={<Home chooseClass={chooseClass} />} />
         <Route path="Generator" element={<Generator newClass={newClass} />} />
       </Routes>
+      
       <Footer />
     </Router >
   )
