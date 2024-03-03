@@ -1,10 +1,18 @@
+:root {
+  --bg-dark-blue: #32658A;
+	--bg-mid-blue: #6D92AD;
+  --bg-light-blue: #b2d5ee;
+  --bg-soft-yellow: #FFDE59;
+}
+
+
 body {
   margin: 0;
-  /* background-color: #6D92AD!important; */
-  /* display: flex;
-  align-items: center; */
+  background-color: var(--bg-light-blue) !important;
   min-width: 100vh;
   min-height: 100vh;
+  /* display: flex;
+  align-items: center; */
 }
 
 
@@ -12,7 +20,7 @@ body {
   NavBar
 =========== */
 .navbar.navbar {
-  background-color: #32658A;
+  background-color: var(--bg-dark-blue);
   width: 100%;
   position: absolute !important;
   top: 0;
@@ -23,6 +31,8 @@ body {
 .navbar-text {
   color: white !important;
   text-align: center !important;
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 100;
 }
 
 .navbar-brand img {
@@ -40,9 +50,9 @@ Meme Wrapper - Overall Container
   height: 70vh;
   width: 100vw;
   position: relative;
-  margin-left: 0;
-  margin-top: 50px;
-  padding-bottom: 50px;;
+  margin: 0;
+  padding: 5%;
+  /* background-color: #FFDE59; */
 }
 
 
@@ -58,6 +68,7 @@ The Meme (this probably need further editing, now we're using bootstrap)
 .meme-img {
   width: auto;
   border-radius: 2%;
+  max-height: 300px;
 }
 
 .meme-top-line {
@@ -94,16 +105,25 @@ The Meme (this probably need further editing, now we're using bootstrap)
     1px 1px 5px white;
 }
 
+#meme-btns {
+  padding-top: 50px;
+  text-align: center;
+}
 
 /* ===========================================
 Storage - meme card and the storage buttons
 =========================================== */
 
-#storage, #storage.card {
+#meme-storage {
   border: none !important;
+
 }
 
-
+#local-storage {
+  background-color: var(--bg-light-blue);
+  padding: 3%;
+  border: none !important;
+}
 
 /* ===========================================
             Cat and Dog backgrounds
@@ -123,14 +143,12 @@ Storage - meme card and the storage buttons
             Meme form card
 =========================================== */
 
-/* 
-.meme-card {
-  background-color: rgb(100,149,237) !important;
-} */
 
 .meme-card {
   background-color: rgba(112, 145, 207, 0.6) !important;
   color: white !important;
+  height: 400px;
+  margin-top: 30px;
 }
 
 .meme-card .card-header {

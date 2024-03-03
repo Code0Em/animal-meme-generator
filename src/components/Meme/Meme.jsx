@@ -140,7 +140,7 @@ const Meme = ({ animalType }) => {
                                 </Form.Group>
                             </Form>
 {/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
-                            <div>
+                            <div id='meme-btns'>
                             <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
                             <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
                             </div>
@@ -151,7 +151,7 @@ const Meme = ({ animalType }) => {
 
 {/*  ---------------------------------------------------------------------------------------  */}
                 <Col>
-                    <Card id='storage'>
+                    <Card id='meme-storage'>
                     {loading ? (
                         <p className="text-center">Anything is paw-sible!</p>
                     ) : (
@@ -174,7 +174,7 @@ const Meme = ({ animalType }) => {
             {/* reload button for saved memes */}
             <Row>
                 <Col>
-                    <Card id="storage">
+                    <Card id="local-storage">
                     <div>
                         {savedMemes.map((savedMeme, index) => (
                             <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
