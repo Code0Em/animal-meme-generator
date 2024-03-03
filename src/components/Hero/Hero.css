@@ -1,10 +1,15 @@
-/* #restart {
-	background-color: #FFDE59;
-	width: 100%;
-	position: relative !important;
-	margin-top: 20px;
-	text-align: center !important;
-} */
+:root {
+  --bg-dark-blue: #32658A;
+	--bg-mid-blue: #6D92AD;
+  --bg-light-blue: #b2d5ee;
+	--bg-soft-yellow: #FFDE59;
+}
+
+#restart {
+  background-color: var( --bg-light-blue) !important;
+	padding-left: 3%;
+
+}
 
 #btn-restart {
 	width: fit-content;
@@ -19,9 +24,8 @@
 	font-family: inherit;
 	cursor: pointer;
 	transition: border-color 0.25s;
-	background-color: #32658A !important;
-	color: white;
-	
+	background-color: var(--bg-soft-yellow) !important;
+	color: blue);
 	position: relative !important;
 	margin-top: 20px;
 	text-align: center !important;
