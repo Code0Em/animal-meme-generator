@@ -110,86 +110,88 @@ const Meme = ({ animalType }) => {
     // return structured JSX - image currently restricted to 300px width (this can be changed), also returns cat breed as URL link to Wiki page
     return (
         <>
-        <Container fluid id='meme-wrapper'>
-{/*  ---------------------------------------------------------------------------------------  */}
-            <Row>
-                <Col>
-                    <Card className="meme-card m-3">
-                        <Card.Header>
-                            <h5 className="text-center">So fur, so good...</h5>
-                        </Card.Header>
-                        <Card.Body>
-                            <Form className="p-3 top-form">
-                                <h6 className="form-subheading text-center">Top Text</h6>
-                                <Form.Group controlId="topLine">
-                                    <Form.Control
-                                        type="text"
-                                        value={memeText.topLine}
-                                        name="topLine"
-                                        onChange={handleInputChange}
-                                        placeholder="Enter top line of meme"
-                                    />
-                                </Form.Group>
-                            </Form>
-                            <Form className="p-3 bottom-form">
-                                <h6 className="form-subheading">Bottom Text</h6>
-                                <Form.Group controlId="bottomLine">
-                                    <Form.Control
-                                        type="text"
-                                        value={memeText.bottomLine}
-                                        name="bottomLine"
-                                        onChange={handleInputChange}
-                                        placeholder="Enter bottom line of meme"
-                                    />
-                                </Form.Group>
-                            </Form>
-{/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
+            <Container fluid id='meme-wrapper'>
+                {/*  ---------------------------------------------------------------------------------------  */}
+                <Row>
+                    <Col>
+                        <Card className="meme-card m-3">
+                            <Card.Header>
+                                <h5 className="text-center">So fur, so good...</h5>
+                            </Card.Header>
+                            <Card.Body>
+                                <Form className="p-3 top-form">
+                                    <h6 className="form-subheading text-center">Top Text</h6>
+                                    <Form.Group controlId="topLine">
+                                        <Form.Control
+                                            type="text"
+                                            value={memeText.topLine}
+                                            name="topLine"
+                                            onChange={handleInputChange}
+                                            placeholder="Enter top line of meme"
+                                            maxLength={30}
+                                        />
+                                    </Form.Group>
+                                </Form>
+                                <Form className="p-3 bottom-form">
+                                    <h6 className="form-subheading">Bottom Text</h6>
+                                    <Form.Group controlId="bottomLine">
+                                        <Form.Control
+                                            type="text"
+                                            value={memeText.bottomLine}
+                                            name="bottomLine"
+                                            onChange={handleInputChange}
+                                            placeholder="Enter bottom line of meme"
+                                            maxLength={30} // Add maxLength attribute for validation
+                                        />
+                                    </Form.Group>
+                                </Form>
+                                {/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
+                                <div>
+                                    <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
+                                    <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
+                                </div>
+
+                            </Card.Body>
+                        </Card>
+                    </Col>
+
+                    {/*  ---------------------------------------------------------------------------------------  */}
+                    <Col>
+                        <Card id='storage'>
+                            {loading ? (
+                                <p className="text-center">Anything is paw-sible!</p>
+                            ) : (
+                                <section className="meme-container">
+                                    <img src={image} className="meme-img" alt={`${animalType} Meme`}/>
+                                    <p className={"meme-top-line " + textColor}>{memeText.topLine}</p>
+                                    <p className={"meme-bottom-line " + textColor}>{memeText.bottomLine}</p>
+                                    <p>
+                                        {breed && (
+                                            <a href={breedWikiUrl} target="_blank" rel="noopener noreferrer">{breed}</a>
+                                        )}
+                                    </p>
+                                </section>
+                            )}
+                        </Card>
+                    </Col>
+                </Row>
+                {/*  ---------------------------------------------------------------------------------------  */}
+
+                {/* reload button for saved memes */}
+                <Row>
+                    <Col>
+                        <Card id="storage">
                             <div>
-                            <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
-                            <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
+                                {savedMemes.map((savedMeme, index) => (
+                                    <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
+                                        Reload Meme {index + 1}
+                                    </Button>
+                                ))}
                             </div>
-
-                        </Card.Body>
-                    </Card>
-                </Col>
-
-{/*  ---------------------------------------------------------------------------------------  */}
-                <Col>
-                    <Card id='storage'>
-                    {loading ? (
-                        <p className="text-center">Anything is paw-sible!</p>
-                    ) : (
-                        <section className="meme-container">
-                            <img src={image} className="meme-img" alt={`${animalType} Meme`} style={{ maxWidth: '300px' }} />
-                            <p className={"meme-top-line " + textColor}>{memeText.topLine}</p>
-                            <p className={"meme-bottom-line " + textColor}>{memeText.bottomLine}</p>
-                            <p>
-                                {breed && (
-                                    <a href={breedWikiUrl} target="_blank" rel="noopener noreferrer">{breed}</a>
-                                )}
-                            </p>
-                        </section>
-                    )}
-                    </Card>
-                </Col>
-            </Row>
-{/*  ---------------------------------------------------------------------------------------  */}
-            
-            {/* reload button for saved memes */}
-            <Row>
-                <Col>
-                    <Card id="storage">
-                    <div>
-                        {savedMemes.map((savedMeme, index) => (
-                            <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
-                                Reload Meme {index + 1}
-                            </Button>
-                        ))}
-                    </div>
-                    </Card>
-                </Col>
-            </Row>
-        </Container>
+                        </Card>
+                    </Col>
+                </Row>
+            </Container>
         </>
     );
 };
