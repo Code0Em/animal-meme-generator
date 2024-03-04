@@ -9,10 +9,10 @@
 body {
   margin: 0;
   background-color: var(--bg-light-blue) !important;
-  min-width: 100vh;
-  min-height: 100vh;
-  /* display: flex;
-  align-items: center; */
+  /* min-width: 100vh;
+  min-height: 100vh; */
+  /* display: flexbox;
+  justify-content: space-between; */
 }
 
 
@@ -47,13 +47,22 @@ body {
 Meme Wrapper - Overall Container
 =========== */
 #meme-wrapper {
-  height: 70vh;
-  width: 100vw;
+  min-height: calc(100vh - 185px);
+  width: 90vw;
   position: relative;
   margin: 0;
   padding: 5%;
   /* background-color: #FFDE59; */
 }
+
+
+#top-row {
+  /* background-color: rgba(255,255,255); */
+  padding: 2%;
+
+}
+
+
 
 
 /* ===========
@@ -63,8 +72,9 @@ The Meme
 .meme-container {
   position: relative;
   text-align: center;
-  margin-top: 30px;
+  /* margin-top: 30px; */
   max-width: 100%;
+
 }
 
 /* meme text positioned relative to image */
@@ -121,6 +131,7 @@ Storage - meme card and the storage buttons
 
 #meme-storage {
   border: none !important;
+  margin-top: 30px;
 
 }
 
@@ -134,15 +145,32 @@ Storage - meme card and the storage buttons
             Cat and Dog backgrounds
 =========================================== */
 
-/* .cat {
-  background-image: url(../images/cat-background-test.png);
-  background-color: cornflowerblue;
+#banner {
+  height: 100px;
+  /* background-color: #FFDE59; */
+}
+
+
+.cat {
+  background-image: url(../images/kitty-yarn.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y:top;
+  background-size: contain;
+  width: 100vw;
+  
+
+ 
+
+
 }
 
 .dog {
-  background-image: url(../images/dog-background-test.png);
-  background-color: cornflowerblue;
-} */
+  background-image: url(../images/dog-icon.png); 
+  background-repeat:no-repeat;
+  background-position-x: center;
+
+}
 
 /* ===========================================
             Meme form card
@@ -151,9 +179,11 @@ Storage - meme card and the storage buttons
 
 .meme-card {
   background-color: rgba(112, 145, 207, 0.6) !important;
+  /* background-color: rgba(112, 145, 207) !important; */
   color: white !important;
   height: 400px;
   margin-top: 30px;
+  /* z-index: -1; */
 }
 
 .meme-card .card-header {
@@ -182,11 +212,11 @@ Storage - meme card and the storage buttons
   Testing Purposes Only - Need to be updated
 =========================================== */
 
-.container {
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+} */
 
 
 /* ===========
@@ -194,12 +224,12 @@ Footer
 =========== */
 footer {
   position: absolute;
-  left: 0;
+  /* left: 0;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
+  height: 100px;
+  /* margin-top: calc (max-height-185px); */
   width: 100% !important;
-  height: 150px;
-  /* height: 100px; */
   padding-top: 15px;
   padding-bottom: 20px;
   background-color: #32658A !important;
@@ -207,6 +237,7 @@ footer {
   justify-content: center;
   align-items: flex-end; 
   display: flex;
+  margin-bottom: 0;
 }
 
 footer p {
