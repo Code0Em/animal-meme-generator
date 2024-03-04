@@ -1,4 +1,39 @@
-:root {
+/* Hero (sets margin top so button isn't covered by Navbar) */
+#hero {
+	margin-top: 100px;
+  }
+
+/* Hero Buttons */
+  #hero button {
+	border-radius: 50px;
+	border: none;
+	font-size: x-large;
+	padding: 0.6em 1.2em;
+	border: 1px solid transparent;
+	font-weight: 500;
+	font-family: inherit;
+	cursor: pointer;
+	transition: border-color 0.25s;
+	background-color: var(--bg-soft-yellow) !important;
+	color: darkblue;
+  }
+
+  /* Media Queries (sets margin top so button isn't covered by Navbar) */
+@media screen and (max-width: 550px) {
+	#hero {
+	  margin-top: 50px;
+	}
+  }
+    
+  @media screen and (max-width: 991px) and (min-width: 554px){
+	#hero {
+	  margin-top: 75px;
+	}
+  }
+  
+
+
+/* :root {
   --bg-dark-blue: #32658A;
 	--bg-mid-blue: #6D92AD;
   --bg-light-blue: #b2d5ee;
@@ -15,10 +50,10 @@
 #btn-restart {
 	width: fit-content;
 	/* margin-top: 10px; */
-	border-radius: 50px;
-	border: none;
+	/* border-radius: 50px;
+	border: none; */
 	/* margin-bottom: 10px; */
-	font-size: x-large;
+	/* font-size: x-large;
 	padding: 0.6em 1.2em;
 	border: 1px solid transparent;
 	font-weight: 500;
@@ -30,15 +65,15 @@
 	position: relative !important;
 	margin-top: 20px;
 	text-align: center !important;
-}
+} */
 
-#storage-btn {
+/* #storage-btn {
 	width: fit-content;
 	margin-top: 10px;
 	border-radius: 50px;
-	border: none;
+	border: none; */
 	/* margin-bottom: 10px; */
-	font-size: larger;
+	/* font-size: larger;
 	padding: 0.6em 1.2em;
 	border: 1px solid transparent;
 	font-weight: 500;
@@ -47,5 +82,4 @@
 	transition: border-color 0.25s;
 	background-color: #32658A !important;
 	color: white;
-	margin-right: 15px;
-}
+	margin-right: 15px; */

@@ -1,30 +1,24 @@
-// imports
-import { Link } from 'react-router-dom';
+// Imports
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
-// take in chooseClass prop
-// return structured JSX (buttons), the onClicks calls the corresponding prop
+// Function that takes in chooseClass prop and returns structured JSX (buttons), and the onClicks calls the corresponding prop
 const Home = ({ chooseClass }) => {
     return (
-        <>
-            <section className='hero p-5'>
-                <h1>Are you a cat or a dog person?</h1>
-                <Link to='Generator'>
-                    <button id='btn-cat' onClick={() => chooseClass('cat')}>Cat</button>
-                </Link>
-                <Link to='Generator'>
-                    <button id='btn-dog' onClick={() => chooseClass('dog')}>Dog</button>
-                </Link>
-                
-            </section>
-
-            {/* <div className='hero p-5' style={{ backgroundImage: `url(${props.backgroundImage})` }}>
-            
-            </div> */}
-        </>
+            <article id="home-bg" className="row">
+                <article id="home-heading" className="text-center">
+                    <h1>Are you a cat or a dog person?</h1>
+                    <Link to='Generator'>
+                        <button id='btn-cat' className="me-2" onClick={() => chooseClass('cat')}>Cat</button>
+                    </Link>
+                    <Link to='Generator'>
+                        <button id='btn-dog' className="ms-2" onClick={() => chooseClass('dog')}>Dog</button>
+                    </Link>
+                </article>
+            </article>
     )
 };
 
-// exports
+// Exports
 export default Home;

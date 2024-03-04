@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { catApiUrl, dogApiUrl } from '../utils/constraints.js';
 import { Button, Card, Form, Container, Row, Col } from 'react-bootstrap';
-import './../../App.css';
+import './Meme.css';
 
 
 // store API keys for the cat and dog APIs
@@ -118,12 +118,12 @@ const Meme = ({ animalType }) => {
                 {/*  ---------------------------------------------------------------------------------------  */}
                 <Row id="banner"></Row>
                 <Row id="top-row" className="d-flex flex-row">
-                    <Col>
-                        <Card className="meme-card m-3">
+                    <Col xs={12} md={12} lg={6}>
+                        <Card className="meme-card m-3 text-center">
                             <Card.Header>
                                 <h5 className="text-center">So fur, so good...</h5>
                             </Card.Header>
-                            <Card.Body>
+                            <Card.Body className="justify">
                                 <Form className="p-3 top-form">
                                     <h6 className="form-subheading text-center">Top Text</h6>
                                     <Form.Group controlId="topLine">
@@ -150,19 +150,17 @@ const Meme = ({ animalType }) => {
                                         />
                                     </Form.Group>
                                 </Form>
-                                {/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
-                                <div id="meme-btns">
+                                <section className="col-lg">
                                     <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
                                     <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
-                                </div>
-
+                                    </section>                           
                             </Card.Body>
                         </Card>
                     </Col>
 
                     {/*  ---------------------------------------------------------------------------------------  */}
-                    <Col>
-                        <Card id='meme-storage'>
+                    <Col className="col-lg-6">
+                        <Card >
                             {loading ? (
                                 <p className="text-center">Anything is paw-sible!</p>
                             ) : (
@@ -192,7 +190,7 @@ const Meme = ({ animalType }) => {
                 <Row>
                     <Col>
                         <Card id="local-storage">
-                            <div>
+                            <div className="text-center">
                                 {savedMemes.map((savedMeme, index) => (
                                     <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
                                         Reload Meme {index + 1}

@@ -1,10 +1,10 @@
-// imports
+// Imports
 import React, { useEffect, useState } from 'react';
 import Hero from '../Hero/Hero';
 import Meme from '../Meme/Meme';
 import { fetchAnimalApi } from '../utils/api.jsx';
 
-// take in newClass prop
+// Function that takes in newClass prop
 const Generator = ({ newClass }) => {
     const [animalImage, setAnimalImage] = useState('');
 
@@ -26,16 +26,18 @@ const Generator = ({ newClass }) => {
         }
     }, [newClass]);
 
-    // return structured JSX container
+    // returns structured JSX container
     return (
         <>
-            <Hero />
-            <section className={"container " + newClass}>
+            <section className={"container-fluid " + newClass}>
+                <article className="row justify-content-center">
+                <Hero />
                 <Meme animalType={newClass} />
+                </article>
             </section>
         </>
     );
 };
 
-// exports
+// Exports
 export default Generator;

@@ -1,26 +1,18 @@
-//===========
 //  Imports
-//===========
 import { Link } from 'react-router-dom';
-import '../Hero/Hero.css';
-import { Container } from 'react-bootstrap';
+import './Hero.css';
 
-//=============
 //  Functions
-//=============
 const Hero = () => {
     return (
         <>
-
-            {/* <section className ='p-5' id="restart"> */}
-            <section>
-                <div id="restart">
+            <article id="hero" className="row">
+                <article className="text-center">
                     <Link to="/">
-                        <button type="button" className="btn" id="btn-restart">Start again</button>
+                        <button type="button" className="btn">Start again</button>
                     </Link>
-                </div>
-            </section>  
-
+                </article>
+            </article>
         </>
     )
 };

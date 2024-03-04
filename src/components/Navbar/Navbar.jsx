@@ -1,19 +1,30 @@
-//=============
-//  Functions
-//=============
-
+// Imports
 import React from 'react';
+import { Navbar, Container } from 'react-bootstrap';
+import './Navbar.css'
 
-const Home = () => {
+
+// Function
+const NavBar = () => {
     return (
-        <>
-            <nav className="navbar navbar-expand-lg fixed-top">
-                <div className="container-fluid">
-                    <h1 className="navbar-text mx-auto"><img src="./images/paw-solid.svg" alt="logo" style={{ height: '30px' }} />   Bark vs. Meow: The Battle for the Couch   <img src="./images/paw-solid.svg" alt="logo" style={{ height: '30px' }} /></h1>
-                </div>
-            </nav>
-        </>
+        <header>
+            <Navbar id="custom-nav" expand="lg" className="bg-body-tertiary" fixed="top">
+                <Container className="justify-content-center text-center">
+                    <article className="justify-content-center text-center">
+                        <img className="me-3" src="./images/paw-solid.svg" alt="" width="30" height="24" />
+                    </article>
+                    <article className="justify-content-center text-center">
+                        <Navbar.Collapse id="basic-navbar-nav">
+                            <h1 id="nav-heading">Bark vs. Meow: The Battle for the Couch</h1>
+                            <img className="ms-3" src="./images/paw-solid.svg" alt="" width="30" height="24" />
+                        </Navbar.Collapse>
+                    </article>
+                </Container>
+            </Navbar>
+        </header>
     );
 };
 
-export default Home;
+
+// Export
+export default NavBar;
