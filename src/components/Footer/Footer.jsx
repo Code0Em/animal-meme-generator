@@ -6,7 +6,7 @@ import React from "react";
 const Footer = () => {
     return (
         <>
-            <footer>
+            <footer className="py-3 my-4 footer-basic">
                 <div><p>&copy;Animal Meme Generator 2024. All Rights Reserved.</p></div>
             </footer >
         </>
