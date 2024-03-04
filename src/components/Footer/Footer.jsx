@@ -1,19 +1,21 @@
+// Imports
 import React from "react";
+import './Footer.css';
 
-//=============
-//  Functions
-//=============
+// Function
 const Footer = () => {
     return (
         <>
-            <footer className="py-3 my-4 footer-basic">
-                <div><p>&copy;Animal Meme Generator 2024. All Rights Reserved.</p></div>
-            </footer >
+            <footer id="custom-footer" className="container-fluid text-center pt-3 mb-3">
+                <section className="row justify-content-center">
+                    <article className="col-lg-12">
+                        <p>&copy;Animal Meme Generator 2024. All Rights Reserved.</p>
+                    </article>
+                </section>
+            </footer>
         </>
     )
 };
 
-//===========
-//  Exports
-//===========
+// Exports
 export default Footer;

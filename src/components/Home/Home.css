@@ -1,108 +1,39 @@
-/* body {
-  text-align: center;
-} */
+/* Home background (sets sizing, padding/ margin and background image) */
+#home-bg {
+  padding: 0%;
+  margin: 0%;
+  height: 90vh;
+  width: 100vw;
+  background-image: url('./../../../images/pets-landing05.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
 
-.hero h1 {
-  text-align: center;
+/* Home heading (sets margin top so heading isn't covered by Navbar, and font styling) */
+#home-heading h1 {
+  margin-top: 100px;
   font-family: "Lilita One", sans-serif;
   font-weight: 400;
   font-style: normal;
   font-size: 90px;
   color: white;
-  /* color: black; */
-  padding-top: 200px;
-
-
-  /* padding-top: 80px; */
 }
 
-
-h2 {
-  text-align: center;
-  font-size: 140px;
-  /* margin-top: 12px; */
-  padding-top: 12px;
-}
-
-.hero {
-  height: 100vh;
-  width: 100vw;
-  background-size: cover;
-  background-image: url('./../../../images/pets-landing05.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  margin-bottom: 0;
-  margin-left: 0;
-  text-align: center;
-
-}
-
-.hero::after {
-  content: "";
-  display: block;
-  opacity: .4;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.hero * {
-  position: relative;
-  z-index: 2;
-}
-
-
-
-@media screen and (max-width: 550px) {
-  .hero h1 {
-    font-size: 55px;
-    padding-top: 50px;
-  }
-}
-
-@media screen and (max-width: 1437px) {
-  .hero h1 {
-    font-size: 75px;
-    padding-top: 100px;
-  }
-
-  .hero h2 {
-    font-size: 22px;
-  }
-}
-
-@media screen and (max-width: 1155px) {
-  .hero h1 {
-    font-size: 75px;
-    padding-top: 150px;
-  }
-  .hero h2 {
-    font-size: 20px;
-  }
-}
-
-
-
-
-
+/* Home buttons (Cat and Dog) */
 #btn-cat,
 #btn-dog {
-width:fit-content;
-margin-top: 10px;
-border-radius: 50px;
-border: none;
-margin-bottom: 10px;
-font-size: x-large;
-padding: 0.6em 1.2em;
-border: 1px solid transparent;
-font-weight: 600;
-font-family: inherit;
-transition: border-color 0.25s;
-color: darkblue;
+  border-radius: 50px;
+  font-size: x-large;
+  padding: 0.6em 1.2em;
+  border: 1px solid transparent;
+  font-weight: 500;
+  color: darkblue;
+}
 
+#btn-cat:hover,
+#btn-dog:hover {
+  border-color: #646cff;
 }
 
 #btn-cat:focus,
@@ -112,17 +43,39 @@ color: darkblue;
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Home buttons (Dog only) */
 #btn-dog {
   background-color: yellow;
-  cursor: url(http://www.zingerbugimages.com/cursors/paws1.ani), 
-  url(http://www.zingerbug.com/cursors/cursors/paws1.gif), progress !important;
+  cursor: url(http://www.zingerbugimages.com/cursors/paws1.ani),
+    url(http://www.zingerbug.com/cursors/cursors/paws1.gif), progress !important;
   margin-left: 60px;
-  }
-
-
-#btn-cat {
-  background-color: orange;
-  cursor: url(http://www.zingerbugimages.com/cursors/catscratch2.ani), 
-  url(http://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
 }
 
+/* Home buttons (Cat only) */
+#btn-cat {
+  background-color: orange;
+  cursor: url(http://www.zingerbugimages.com/cursors/catscratch2.ani),
+    url(http://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
+}
+
+/* Media Queries (sets font size of heading and margin top so it isn't covered by Navbar) */
+@media screen and (max-width: 550px) {
+  #home-heading h1 {
+    font-size: 55px;
+    margin-top: 50px;
+  }
+}
+
+@media screen and (max-width: 1155px) and (min-width: 554px) {
+  #home-heading h1 {
+    font-size: 75px;
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 1437px) and (min-width: 1154px){
+  #home-heading h1 {
+    font-size: 85px;
+    margin-top: 75px;
+  }
+}

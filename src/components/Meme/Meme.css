@@ -1,0 +1,228 @@
+/* =======================================
+Background Banner (below Start Again button)
+======================================= */
+/* Background banners (Cat and Dog) */
+#banner {
+    height: 100px;
+}
+
+/* Background banners (Cat only) */
+.cat #banner {
+    background-image: url(../images/kitty-yarn.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: contain;
+}
+
+/* Background banners (Dog only) */
+.dog #banner {
+    background-image: url(../images/dog-icon.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: top;
+    background-size: contain;
+}
+
+/* =======================================
+Buttons
+======================================= */
+/* Meme buttons (Cat and Dog) */
+.cat button,
+.dog button {
+    border-radius: 50px;
+    font-size: large;
+    padding: 0.6em 1.2em;
+    margin-left: 10px;
+    border: 1px solid transparent;
+    font-family: inherit;
+    font-weight: 500;
+    color: darkblue;
+}
+
+.cat button:hover,
+.dog button:hover {
+    border-color: #646cff;
+}
+
+.cat button:focus,
+.cat button:focus-visible,
+.cat button:focus,
+.cat button:focus-visible,
+.dog button:focus,
+.dog button:focus-visible,
+.dog button:focus,
+.dog button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Meme buttons (Dog only) */
+.dog button {
+    background-color: yellow;
+    cursor: url(http://www.zingerbugimages.com/cursors/paws1.ani), url(http://www.zingerbug.com/cursors/cursors/paws1.gif), progress !important;
+}
+
+/* Meme buttons (Cat only) */
+.cat button {
+    background-color: orange;
+    cursor: url(http://www.zingerbugimages.com/cursors/catscratch2.ani), url(http://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
+}
+
+/* Meme buttons (Reload meme only) */
+#storage-btn {
+    margin-bottom: 10px;
+}
+
+/* ===============================================================
+Meme Wrapper (contains form, text over meme, meme image and breed info)
+================================================================== */
+#meme-wrapper {
+    min-height: calc(100vh - 185px);
+    width: 90vw;
+    position: relative;
+    margin: 0;
+    /* padding: 5%; */
+    /* background-color: #FFDE59; */
+  }
+  
+  #top-row {
+    /* background-color: rgba(255,255,255); */
+    padding: 2%;
+    
+  }
+
+  /* ==========
+Meme Form
+============= */
+
+.meme-card {
+    background-color: rgba(112, 145, 207, 0.6) !important;
+    /* background-color: rgba(112, 145, 207) !important; */
+    color: white !important;
+    height: 400px;
+    margin-top: 30px;
+    /* z-index: -1; */
+  }
+  
+  .meme-card .card-header {
+    border: none !important;
+  }
+  
+  .top-form {
+    margin-bottom: 10px; 
+  }
+  
+  .bottom-form {
+    margin-top: 10px; 
+  }
+  
+  .form-subheading {
+    margin-bottom: 5px; 
+    text-align: center; 
+  }
+
+  /* ===========
+The Meme
+=========== */
+/* width of meme container must not exceed parent container. text is aligned to the center */
+/* NOTE: Edit here to change breed information styling */
+.meme-container {
+    position: relative;
+    text-align: center;
+    /* margin-top: 30px; */
+    max-width: 100%;
+    background-color: var(--bg-light-blue);
+  }
+  
+  /* meme text positioned relative to image */
+  .meme-img {
+    width: 100%;
+    height: auto;
+    border-radius: 2%;
+    position: relative;
+  }
+  
+  /* top and bottom lines of meme text positioned absolute */
+  .meme-top-line,
+  .meme-bottom-line {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-family: impact, sans-serif;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+  }
+  
+  .meme-top-line {
+    top: 8%;
+  }
+  
+  /* bottom line is more than top-line because as meme-container includes breed information (so we need to push it above this text) */
+  .meme-bottom-line {
+    bottom: 18%;
+  }
+  
+  .meme-text-light {
+    color: white;
+    text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000,
+    1px 1px 5px #000;
+  }
+  
+  .meme-text-dark {
+    color: black;
+    text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
+    -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white,
+    1px 1px 5px white;
+  }
+
+  /* ===========================================
+Card for Storage buttons
+=========================================== */
+
+#meme-storage {
+    border: none !important;
+    /* margin-top: 30px; */
+    
+  }
+  
+  #local-storage {
+    background-color: var(--bg-light-blue);
+    padding: 3%;
+    border: none !important;
+  }
+
+  /* ==============
+Media Queries
+=================== */
+/* Sets button so remain oval shaped on smaller screens */
+@media screen and (max-width: 1004px) {
+
+    .cat button,
+    .dog button {
+        padding: 0.3em 2.6em;
+        margin-bottom: 10px;
+        font-size: medium;
+    }
+
+/* Keeps bottom line of text over meme image */
+    .meme-bottom-line {
+        bottom: 20%;
+      }
+}
+
+@media screen and (max-width: 692px) {
+
+      .meme-bottom-line {
+        bottom: 25%;
+      }
+}
+
+@media screen and (max-width: 517px) {
+
+    .meme-bottom-line {
+      bottom: 30%;
+    }
+}
