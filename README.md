@@ -42,16 +42,17 @@ Bark vs. Meow has an aesthetically pleasing and accessible user interface which 
 
 ## Testing
 
-Following a  Behavior-Driven Development (BDD) methodology, Bark vs. Meow uses [Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing the application's behaviour. The following behaviours were tested:
+Following a  Behavior-Driven Development (BDD) methodology, Bark vs. Meow uses [Vitest](https://vitest.dev/) with [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/) for testing the application's behaviour. During development, the following behaviours were tested:
 
 1. The App component renders without throwing an error.
-1. The cat and dog buttons render in App component.
+1. The cat and dog buttons render in the App component.
 1. When the user clicks the cat or dog button, input fields (for the meme text) are rendered.
-1. When the user clicks the start again button, the cat and dog buttons are rendered.
+1. The meme image is rendered in the Meme component.
+1. When the user clicks the start again button, the cat and dog buttons are rendered (again).
 
 At the time of publishing this README, all tests pass:
 
-![Screenshot of the terminal displaying test results, shows 4 tests run and all passed](./images/tests-passed-screenshot.png)
+![Screenshot of the terminal displaying test results, shows 4 tests run and all passed](TO ADD WHEN FINISHED TESTING)
 
 ## Contributors
 
@@ -93,4 +94,6 @@ Select the badge or visit the `LICENSE.txt` (above) for more information.
 DEV Community (2024) [*Introduction to Testing React Components with Vite, Vitest and React Testing Library*](https://dev.to/brslv/introduction-to-testing-react-components-with-vite-vitest-and-react-testing-library-8cb).
 
 freeCodeCamp (2022) [*How to Write Unit Tests for React Apps*](https://www.freecodecamp.org/news/write-unit-tests-using-react-testing-library/).
+
+Timothy Amo (2021) [*Testing Conditional Render In React*](https://www.youtube.com/watch?v=To2PzUT1lQ4).
 
