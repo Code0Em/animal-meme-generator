@@ -19,9 +19,9 @@ const Meme = ({ animalType }) => {
     const [temperament, setTemperament] = useState('');
     const [loading, setLoading] = useState(true);
     // States for meme text colour change (inc the button)
-    const [textColor, setTextColor] = useState('meme-text-dark')
-    const [btnTheme, setBtnTheme] = useState('light')
-    const [btnText, setBtnText] = useState('Light')
+    const [textColor, setTextColor] = useState('meme-text-light')
+    const [btnTheme, setBtnTheme] = useState('dark')
+    const [btnText, setBtnText] = useState('Dark')
     const [savedMemes, setSavedMemes] = useState([]);
 
     // useEffect hook fetches the image URL when the animalType prop changes (to cat or dog)
@@ -64,9 +64,9 @@ const Meme = ({ animalType }) => {
 
     // Change meme text color on click
     const handleColorChange = () => {
-        setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
-        setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
-        setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
+    setTextColor(textColor === 'meme-text-light' ? 'meme-text-dark' : 'meme-text-light');
+    setBtnTheme(textColor === 'meme-text-light' ? 'light' : 'dark');
+    setBtnText(textColor === 'meme-text-light' ? 'Light' : 'Dark');
     }
 
     //  load saved memeText from local storage
