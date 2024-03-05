@@ -1,10 +1,10 @@
 /* Hero (sets margin top so button isn't covered by Navbar) */
 #hero {
 	margin-top: 100px;
-  }
+}
 
 /* Hero Buttons */
-  #hero button {
+#hero button {
 	border-radius: 50px;
 	border: none;
 	font-size: x-large;
@@ -16,21 +16,21 @@
 	transition: border-color 0.25s;
 	background-color: var(--bg-soft-yellow) !important;
 	color: darkblue;
-  }
+}
 
-  /* Media Queries (sets margin top so button isn't covered by Navbar) */
+/* Media Queries (sets margin top so button isn't covered by Navbar) */
 @media screen and (max-width: 550px) {
 	#hero {
-	  margin-top: 50px;
+		margin-top: 50px;
 	}
-  }
-    
-  @media screen and (max-width: 991px) and (min-width: 554px){
+}
+
+@media screen and (max-width: 991px) and (min-width: 554px) {
 	#hero {
-	  margin-top: 75px;
+		margin-top: 75px;
 	}
-  }
-  
+}
+
 
 
 /* :root {
@@ -50,10 +50,10 @@
 #btn-restart {
 	width: fit-content;
 	/* margin-top: 10px; */
-	/* border-radius: 50px;
+/* border-radius: 50px;
 	border: none; */
-	/* margin-bottom: 10px; */
-	/* font-size: x-large;
+/* margin-bottom: 10px; */
+/* font-size: x-large;
 	padding: 0.6em 1.2em;
 	border: 1px solid transparent;
 	font-weight: 500;
@@ -72,8 +72,8 @@
 	margin-top: 10px;
 	border-radius: 50px;
 	border: none; */
-	/* margin-bottom: 10px; */
-	/* font-size: larger;
+/* margin-bottom: 10px; */
+/* font-size: larger;
 	padding: 0.6em 1.2em;
 	border: 1px solid transparent;
 	font-weight: 500;
