@@ -4,10 +4,9 @@ import { catApiUrl, dogApiUrl } from '../utils/constraints.js';
 import { Button, Card, Form, Container, Row, Col } from 'react-bootstrap';
 import './Meme.css';
 
-
 // store API keys for the cat and dog APIs
-const apiKey = 'live_js1I9MDcTXDFqs4EQ1NCaHf1c5rasF2iT24oFqHepOKCFKtPXgcHgPDtIV0BG4dz';
-const apiKeyDog = 'live_TzTzfke2nEbQT78jBaONdRuAJuwKAvpPvtQGKSpcLFgRdytWa1ggIeWuUlmS7gSm';
+const apiKey = 'live_le42JSykUEqNaoN7M3RsjE1WI1tZVEWVmlmh1UVtc55g4XxQ5174eKR6ZIlzANRq';
+const apiKeyDog = 'live_BJjfqiZGwUmWKv8d9CN95OlpMN028fuGD1zzrqNkPsXjMbLmt01TV52UCyNw6Odz';
 
 // take in animalType prop
 const Meme = ({ animalType }) => {
@@ -25,26 +24,30 @@ const Meme = ({ animalType }) => {
     const [savedMemes, setSavedMemes] = useState([]);
 
     // useEffect hook fetches the image URL when the animalType prop changes (to cat or dog)
+    // select the correct API key based on if cat or dog is selected
     useEffect(() => {
         const apiUrl = animalType === 'cat' ? catApiUrl : dogApiUrl;
-        const apikeyToUse = animalType === 'cat' ? apiKey : apiKeyDog; // Determine which API key to use
+        const apikeyToUse = animalType === 'cat' ? apiKey : apiKeyDog;
         // set to true on initialization
         setLoading(true);
         fetch(apiUrl, {
-            headers: { 'x-api-key': apikeyToUse } // Use the correct API key based on the animalType
+            headers: { 'x-api-key': apikeyToUse }
         })
+            // throw error if there is a problem getting the response
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Error fetching ${animalType}`);
                 }
+                // return the response
                 return response.json();
             })
+            // if the returned data length is more than 0
             .then(data => {
                 if (data.length > 0) {
                     setImage(data[0].url);
                     setBreed(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].name : '');
                     setBreedWikiUrl(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].wikipedia_url : '');
-                    setTemperament(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].temperament : ''); // Set temperament
+                    setTemperament(data[0].breeds && data[0].breeds.length > 0 ? data[0].breeds[0].temperament : '');
                     setLoading(false);
                 }
             })
@@ -65,9 +68,9 @@ const Meme = ({ animalType }) => {
 
     // Change meme text color on click
     const handleColorChange = () => {
-    setTextColor(textColor === 'meme-text-light' ? 'meme-text-dark' : 'meme-text-light');
-    setBtnTheme(textColor === 'meme-text-light' ? 'light' : 'dark');
-    setBtnText(textColor === 'meme-text-light' ? 'Light' : 'Dark');
+        setTextColor(textColor === 'meme-text-light' ? 'meme-text-dark' : 'meme-text-light');
+        setBtnTheme(textColor === 'meme-text-light' ? 'light' : 'dark');
+        setBtnText(textColor === 'meme-text-light' ? 'Light' : 'Dark');
     }
 
     //  load saved memeText from local storage
@@ -89,7 +92,7 @@ const Meme = ({ animalType }) => {
         localStorage.setItem('savedMemes', JSON.stringify([...savedMemes, newMeme]));
     };
 
-    // reload a saved meme by setting the memeText and imageUrl from a saved meme
+    // reload a savedMeme by setting the memeText and imageUrl from a saved meme
     const handleReloadMeme = (savedMeme) => {
         setMemeText({ topLine: savedMeme.topLine, bottomLine: savedMeme.bottomLine });
         setImage(savedMeme.imageUrl);
@@ -97,6 +100,13 @@ const Meme = ({ animalType }) => {
         setAnimalType(savedMeme.animalType);
         localStorage.setItem('topLine', savedMeme.topLine);
         localStorage.setItem('bottomLine', savedMeme.bottomLine);
+    };
+
+    // remove savedMeme from web page and local storage
+    const handleRemoveMeme = (index) => {
+        const updatedMemes = savedMemes.filter((_, i) => i !== index);
+        setSavedMemes(updatedMemes);
+        localStorage.setItem('savedMemes', JSON.stringify(updatedMemes));
     };
 
     // load saved memes from local storage 
@@ -120,8 +130,8 @@ const Meme = ({ animalType }) => {
                 {/*  -------------------------ROW CONTAINING FORM AND MEME CARD---------------------------------------------------------  */}
                 <Row id="banner"></Row>
                 <Row id="top-row" className="d-flex flex-row align-self-start">
-                       <Col xs={12} md={12} lg={6}>
-                {/*  ------------------------------INPUT FORM--------------------------------------------------------  */}
+                    <Col xs={12} md={12} lg={6}>
+                        {/*  ------------------------------INPUT FORM--------------------------------------------------------  */}
 
                         <Card className="meme-card m-3 text-center">
                             <Card.Header>
@@ -160,13 +170,13 @@ const Meme = ({ animalType }) => {
                                 <section className="col-lg">
                                     <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
                                     <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
-                                    </section>                           
+                                </section>
                             </Card.Body>
                         </Card>
                     </Col>
 
                     {/*  ----------------------------------CARD FOR GENERATED MEME --------------------------------------------------  */}
-                   
+
                     <Col className="col-lg-6">
                         <Card id='meme-storage'>
                             {loading ? (
@@ -194,15 +204,34 @@ const Meme = ({ animalType }) => {
                 </Row>
                 {/*  --------------------------------LOCAL STORAGE BUTTONS----------------------------------------------------  */}
 
-                {/* reload button for saved memes */}
+                {/* reload button for savedMeme */}
                 <Row>
                     <Col>
                         <Card id="local-storage">
                             <div className="text-center">
                                 {savedMemes.map((savedMeme, index) => (
-                                    <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
-                                        Reload Meme {index + 1}
-                                    </Button>
+                                    <div key={index}>
+                                        <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
+                                            Reload Meme {index + 1}
+                                        </Button>
+
+                                    </div>
+                                ))}
+                            </div>
+                        </Card>
+                    </Col>
+                </Row>
+                {/* Remove savedMeme section */}
+                <Row>
+                    <Col>
+                        <Card id="remove-memes">
+                            <div className="text-center">
+                                {savedMemes.map((savedMeme, index) => (
+                                    <div key={index}>
+                                        <Button variant="danger" onClick={() => handleRemoveMeme(index)}>
+                                            Remove Meme {index + 1}
+                                        </Button>
+                                    </div>
                                 ))}
                             </div>
                         </Card>
