@@ -8,7 +8,7 @@ Background Banner (below Start Again button)
 
 /* Background banners (Cat only) */
 .cat #banner {
-  background-image: url(../images/kitty-yarn.png);
+  background-image: url(/images/kitty-yarn.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;
@@ -17,7 +17,7 @@ Background Banner (below Start Again button)
 
 /* Background banners (Dog only) */
 .dog #banner {
-  background-image: url(../images/doggy-bone.png);
+  background-image: url(/images/doggy-bone.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;
