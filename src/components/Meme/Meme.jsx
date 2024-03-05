@@ -201,7 +201,7 @@ const Meme = ({ animalType }) => {
                 </Row>
                 {/*  --------------------------------LOCAL STORAGE BUTTONS----------------------------------------------------  */}
 
-                {/* reload button for saved memes */}
+                {/* reload button for savedMeme */}
                 <Row>
                     <Col>
                         <Card id="local-storage">
@@ -211,9 +211,22 @@ const Meme = ({ animalType }) => {
                                         <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
                                             Reload Meme {index + 1}
                                         </Button>
-                                        {/* remove savedMeme button */}
+
+                                    </div>
+                                ))}
+                            </div>
+                        </Card>
+                    </Col>
+                </Row>
+                {/* Remove savedMeme section */}
+                <Row>
+                    <Col>
+                        <Card id="remove-memes">
+                            <div className="text-center">
+                                {savedMemes.map((savedMeme, index) => (
+                                    <div key={index}>
                                         <Button variant="danger" onClick={() => handleRemoveMeme(index)}>
-                                            Remove Meme
+                                            Remove Meme {index + 1}
                                         </Button>
                                     </div>
                                 ))}
