@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { catApiUrl, dogApiUrl } from '../utils/constraints.js';
 import { Button, Card, Form, Container, Row, Col } from 'react-bootstrap';
-import './../../App.css';
+import './Meme.css';
 
 
 // store API keys for the cat and dog APIs
@@ -19,9 +19,9 @@ const Meme = ({ animalType }) => {
     const [temperament, setTemperament] = useState('');
     const [loading, setLoading] = useState(true);
     // States for meme text colour change (inc the button)
-    const [textColor, setTextColor] = useState('meme-text-dark')
-    const [btnTheme, setBtnTheme] = useState('light')
-    const [btnText, setBtnText] = useState('Light')
+    const [textColor, setTextColor] = useState('meme-text-light')
+    const [btnTheme, setBtnTheme] = useState('dark')
+    const [btnText, setBtnText] = useState('Dark')
     const [savedMemes, setSavedMemes] = useState([]);
 
     // useEffect hook fetches the image URL when the animalType prop changes (to cat or dog)
@@ -64,9 +64,9 @@ const Meme = ({ animalType }) => {
 
     // Change meme text color on click
     const handleColorChange = () => {
-        setTextColor(textColor === 'meme-text-dark' ? 'meme-text-light' : 'meme-text-dark');
-        setBtnTheme(btnTheme === 'dark' ? 'light' : 'dark');
-        setBtnText(btnText === 'Dark' ? 'Light' : 'Dark');
+    setTextColor(textColor === 'meme-text-light' ? 'meme-text-dark' : 'meme-text-light');
+    setBtnTheme(textColor === 'meme-text-light' ? 'light' : 'dark');
+    setBtnText(textColor === 'meme-text-light' ? 'Light' : 'Dark');
     }
 
     //  load saved memeText from local storage
@@ -117,14 +117,14 @@ const Meme = ({ animalType }) => {
                 {/*  -------------------------ROW CONTAINING FORM AND MEME CARD---------------------------------------------------------  */}
                 <Row id="banner"></Row>
                 <Row id="top-row" className="d-flex flex-row align-self-start">
-                    <Col>
+                       <Col xs={12} md={12} lg={6}>
                 {/*  ------------------------------INPUT FORM--------------------------------------------------------  */}
 
-                        <Card className="meme-card m-3">
+                        <Card className="meme-card m-3 text-center">
                             <Card.Header>
                                 <h5 className="text-center">So fur, so good...</h5>
                             </Card.Header>
-                            <Card.Body>
+                            <Card.Body className="justify">
                                 <Form className="p-3 top-form">
                                     <h6 className="form-subheading text-center">Top Text</h6>
                                     <Form.Group controlId="topLine">
@@ -154,18 +154,17 @@ const Meme = ({ animalType }) => {
 
                                 {/*  ------------------------------ BUTTONS FOR LIGHTER TEXT & SAVE MEME---------------------------------------------------------  */}
 
-                                {/* ES NOTE: This can be taken out if we decide we don't want this functionality: atm it changes meme text colour */}
-                                <div id="meme-btns">
+                                <section className="col-lg">
                                     <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
                                     <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
-                                </div>
-
+                                    </section>                           
                             </Card.Body>
                         </Card>
                     </Col>
 
                     {/*  ----------------------------------CARD FOR GENERATED MEME --------------------------------------------------  */}
-                    <Col>
+                   
+                    <Col className="col-lg-6">
                         <Card id='meme-storage'>
                             {loading ? (
                                 <p className="text-center">Anything is paw-sible!</p>
@@ -196,7 +195,7 @@ const Meme = ({ animalType }) => {
                 <Row>
                     <Col>
                         <Card id="local-storage">
-                            <div>
+                            <div className="text-center">
                                 {savedMemes.map((savedMeme, index) => (
                                     <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
                                         Reload Meme {index + 1}
@@ -207,8 +206,6 @@ const Meme = ({ animalType }) => {
                     </Col>
                 </Row>
             </Container>
-
-
         </>
     );
 };

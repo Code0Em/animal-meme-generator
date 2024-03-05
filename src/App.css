@@ -1,3 +1,14 @@
+/* ============================================
+Development Purposes only (delete later)
+=============================================== */
+* {
+  outline: 1px solid #f00 !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+/* ====================================================================================== */
+
 :root {
   --bg-dark-blue: #32658A;
 	--bg-mid-blue: #6D92AD;
@@ -5,9 +16,8 @@
   --bg-soft-yellow: #FFDE59;
 }
 
-
 body {
-  margin: 0;
+  /* margin: 0; */
   background-color: var(--bg-light-blue) !important;
   /* min-width: 100vh;
   min-height: 100vh; */
@@ -16,10 +26,12 @@ body {
 }
 
 
-/* ===========
-  NavBar
-=========== */
-.navbar.navbar {
+/* ====================================================================================== */
+
+/* ============================================
+Navbar (adapted and moved to Navbar.css)
+=============================================== */
+/* .navbar.navbar {
   background-color: var(--bg-dark-blue);
   width: 100%;
   position: absolute !important;
@@ -37,57 +49,81 @@ body {
 
 .navbar-brand img {
   height: 30px; /* Adjust the height as needed */
-  margin-right: 60px;
+  /* margin-right: 60px;
   margin-left: 60px;
-}
+}  */
 
-
-
-/* ===========
-Meme Wrapper - Overall Container
-=========== */
-#meme-wrapper {
+/* ==================================================
+Meme Wrapper - Overall Container (moved to Meme.css)
+=================================================== */
+/* #meme-wrapper {
   min-height: calc(100vh - 185px);
   width: 90vw;
   position: relative;
   margin: 0;
   padding: 5%;
-  /* background-color: #FFDE59; */
+  background-color: #FFDE59;
 }
 
-
 #top-row {
-  /* background-color: rgba(255,255,255); */
+  background-color: rgba(255,255,255);
   padding: 2%;
   display: flex;
   align-items:flex-start;
   justify-items:flex-start;
+} */
+
+/* ===========================================
+Meme form card (moved to Meme.css)
+=========================================== */
+
+/* .meme-card {
+  background-color: rgba(112, 145, 207, 0.6) !important;
+  background-color: rgba(112, 145, 207) !important;
+  color: white !important;
+  height: 400px;
+  margin-top: 30px;
+  z-index: -1;
 }
 
+.meme-card .card-header {
+  border: none !important;
+}
 
+.top-form {
+  margin-bottom: 10px; 
+}
 
+.bottom-form {
+  margin-top: 10px; 
+}
 
-/* ===========
-The Meme
-=========== */
+.form-subheading {
+  margin-bottom: 5px; 
+  text-align: center; 
+} */
+
+/* ====================================================
+The Meme (adapted slightly and moved to Meme.css)
+====================================================== */
 /* width of meme container must not exceed parent container. text is aligned to the center */
-.meme-container {
+/* .meme-container {
   position: relative;
   text-align: center;
   max-width: 100%;
   padding: 10px;
-}
+} */
 
 /* meme text positioned relative to image */
-.meme-img {
+/* .meme-img {
   width: 100%;
   height: auto;
   border-radius: 2%;
   position: relative;
-}
+} */
 
 /* top and bottom lines of meme text positioned absolute */
-.meme-top-line,
+/* .meme-top-line,
 .meme-bottom-line {
   position: absolute;
   width: 100%;
@@ -104,14 +140,14 @@ The Meme
 }
 
 .meme-bottom-line {
-  bottom: 8%;
+  bottom: 18%;
 }
 
 .meme-text-light {
   color: white;
   text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-    -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000,
-    1px 1px 5px #000;
+  -1px 1px 0 #000, 0 1px 0 #000, 1px 0 0 #000, 0 -1px 0 #000, -1px 0 0 #000,
+  1px 1px 5px #000;
 }
 
 .meme-text-dark {
@@ -130,42 +166,48 @@ The Meme
 
 #breed {
   padding-top: 8px;
-}
+} */
 
-/* ===========================================
-Storage - meme card and the storage buttons
-=========================================== */
+/* ==================================================================================
+Storage - meme card and the storage buttons (moved to styling under meme-container)
+==================================================================================== */
 
-#meme-storage {
+/* #meme-storage {
   border: none !important;
   margin-top: 0px;
-
 }
 
 #local-storage {
   background-color: var(--bg-light-blue);
   padding: 3%;
   border: none !important;
-}
+} */
 
-/* ===========================================
-            Cat and Dog backgrounds
-=========================================== */
+/* ============================================
+Meme Buttons (adapted and moved to Meme.css)
+=============================================== */
 
-#banner {
+/* #meme-btns {
+  padding-top: 50px;
+  text-align: center;
+} */
+
+/* =======================================================
+Cat and Dog backgrounds (moved to Meme.css)
+========================================================= */
+
+/* #banner {
   height: 100px;
-  /* background-color: #FFDE59; */
-}
+  background-color: #FFDE59;
+} */
 
-
-.cat {
+/* .cat {
   background-image: url(../images/kitty-yarn.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y:top;
   background-size: contain;
   width: 100vw;
-
 }
 
 .dog {
@@ -176,13 +218,11 @@ Storage - meme card and the storage buttons
   background-size: contain;
   width: 100vw;
   margin-left: 50px;
-
 }
 
 /* ===========================================
             Meme form card
 =========================================== */
-
 
 .meme-card {
 
@@ -228,18 +268,17 @@ Storage - meme card and the storage buttons
   align-items: center;
 } */
 
-
 /* ===========
-Footer
+Footer (adapted and moved to Footer.css)
 =========== */
-footer {
-  position: absolute;
+/* footer {
+  position: absolute; */
   /* left: 0;
   right: 0;
   bottom: 0; */
-  height: 100px;
+  /* height: 100px; */
   /* margin-top: calc (max-height-185px); */
-  width: 100% !important;
+  /* width: 100% !important;
   padding-top: 15px;
   padding-bottom: 20px;
   background-color: #32658A !important;
@@ -248,14 +287,16 @@ footer {
   align-items: flex-end; 
   display: flex;
   margin-bottom: 0;
-}
+} */
 
-footer p {
+/* footer p {
   text-align: center;
   margin: 0;
-}
+} */
 
-/* The below CSS came from Vite's React template */
+/* ===========
+From Vite's React template
+=========== */
 
 /* #root {
   margin: 0 auto;
