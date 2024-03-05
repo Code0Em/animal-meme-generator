@@ -68,7 +68,9 @@ Meme Wrapper - Overall Container (moved to Meme.css)
 #top-row {
   background-color: rgba(255,255,255);
   padding: 2%;
-  
+  display: flex;
+  align-items:flex-start;
+  justify-items:flex-start;
 } */
 
 /* ===========================================
@@ -108,8 +110,8 @@ The Meme (adapted slightly and moved to Meme.css)
 /* .meme-container {
   position: relative;
   text-align: center;
-  margin-top: 30px; 
   max-width: 100%;
+  padding: 10px;
 } */
 
 /* meme text positioned relative to image */
@@ -151,8 +153,19 @@ The Meme (adapted slightly and moved to Meme.css)
 .meme-text-dark {
   color: black;
   text-shadow: 1px 1px 0 white, -1px -1px 0 white, 1px -1px 0 white,
-  -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white,
-  1px 1px 5px white;
+    -1px 1px 0 white, 0 1px 0 white, 1px 0 0 white, 0 -1px 0 white, -1px 0 0 white,
+    1px 1px 5px white;
+}
+
+#meme-btns {
+  padding-top: 50px;
+  padding-bottom: 55px;
+  text-align: center;
+
+}
+
+#breed {
+  padding-top: 8px;
 } */
 
 /* ==================================================================================
@@ -161,8 +174,7 @@ Storage - meme card and the storage buttons (moved to styling under meme-contain
 
 /* #meme-storage {
   border: none !important;
-  margin-top: 30px; 
-  
+  margin-top: 0px;
 }
 
 #local-storage {
@@ -196,13 +208,64 @@ Cat and Dog backgrounds (moved to Meme.css)
   background-position-y:top;
   background-size: contain;
   width: 100vw;
-  }
+}
 
 .dog {
-  background-image: url(../images/dog-icon.png); 
+  background-image: url(../images/doggy-bone.png); 
   background-repeat:no-repeat;
   background-position-x: center;
+  background-position-y:top;
+  background-size: contain;
+  width: 100vw;
+  margin-left: 50px;
+}
 
+/* ===========================================
+            Meme form card
+=========================================== */
+
+.meme-card {
+
+  background-color: rgba(112, 145, 207, 0.6) !important;
+  /* background-color: rgba(112, 145, 207) !important; */
+  color: white !important;
+  height: 400px;
+  max-width: 100%;
+  padding: 10px;
+  
+}
+
+.meme-card .card-header {
+  border: none !important;
+}
+
+.top-form {
+  margin-bottom: 10px; 
+}
+
+.bottom-form {
+  margin-top: 10px; 
+  
+}
+
+.form-subheading {
+  margin-bottom: 5px; 
+  text-align: center; 
+}
+
+
+
+/* ====================================================================================== */
+
+
+/* ===========================================
+  Testing Purposes Only - Need to be updated
+=========================================== */
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 } */
 
 /* ===========

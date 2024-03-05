@@ -113,12 +113,13 @@ const Meme = ({ animalType }) => {
     return (
         <>
             <Container fluid id='meme-wrapper'>
-                {/*  ---------------------------------------------------------------------------------------  */}
 
-                {/*  ---------------------------------------------------------------------------------------  */}
+                {/*  -------------------------ROW CONTAINING FORM AND MEME CARD---------------------------------------------------------  */}
                 <Row id="banner"></Row>
-                <Row id="top-row" className="d-flex flex-row">
-                    <Col xs={12} md={12} lg={6}>
+                <Row id="top-row" className="d-flex flex-row align-self-start">
+                       <Col xs={12} md={12} lg={6}>
+                {/*  ------------------------------INPUT FORM--------------------------------------------------------  */}
+
                         <Card className="meme-card m-3 text-center">
                             <Card.Header>
                                 <h5 className="text-center">So fur, so good...</h5>
@@ -150,6 +151,9 @@ const Meme = ({ animalType }) => {
                                         />
                                     </Form.Group>
                                 </Form>
+
+                                {/*  ------------------------------ BUTTONS FOR LIGHTER TEXT & SAVE MEME---------------------------------------------------------  */}
+
                                 <section className="col-lg">
                                     <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
                                     <Button variant="primary" onClick={handleSaveMeme}>Save Meme</Button>
@@ -158,9 +162,10 @@ const Meme = ({ animalType }) => {
                         </Card>
                     </Col>
 
-                    {/*  ---------------------------------------------------------------------------------------  */}
+                    {/*  ----------------------------------CARD FOR GENERATED MEME --------------------------------------------------  */}
+                   
                     <Col className="col-lg-6">
-                        <Card >
+                        <Card id='meme-storage'>
                             {loading ? (
                                 <p className="text-center">Anything is paw-sible!</p>
                             ) : (
@@ -168,7 +173,7 @@ const Meme = ({ animalType }) => {
                                     <img src={image} className="meme-img" alt={`${animalType} Meme`} />
                                     <p className={"meme-top-line " + textColor}>{memeText.topLine}</p>
                                     <p className={"meme-bottom-line " + textColor}>{memeText.bottomLine}</p>
-                                    <p>
+                                    <p id='breed'>
                                         {breed && (
                                             <>
                                                 I am a <strong>{breed}</strong>
@@ -184,7 +189,7 @@ const Meme = ({ animalType }) => {
                         </Card>
                     </Col>
                 </Row>
-                {/*  ---------------------------------------------------------------------------------------  */}
+                {/*  --------------------------------LOCAL STORAGE BUTTONS----------------------------------------------------  */}
 
                 {/* reload button for saved memes */}
                 <Row>
@@ -201,8 +206,6 @@ const Meme = ({ animalType }) => {
                     </Col>
                 </Row>
             </Container>
-
-
         </>
     );
 };
