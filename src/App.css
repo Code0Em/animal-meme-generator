@@ -25,7 +25,6 @@ body {
   justify-content: space-between; */
 }
 
-
 /* ====================================================================================== */
 
 /* ============================================
@@ -161,7 +160,6 @@ The Meme (adapted slightly and moved to Meme.css)
   padding-top: 50px;
   padding-bottom: 55px;
   text-align: center;
-
 }
 
 #breed {
@@ -224,18 +222,17 @@ Cat and Dog backgrounds (moved to Meme.css)
             Meme form card
 =========================================== */
 
-.meme-card {
+/* .meme-card {
 
-  background-color: rgba(112, 145, 207, 0.6) !important;
+  background-color: rgba(112, 145, 207, 0.6) !important; */
   /* background-color: rgba(112, 145, 207) !important; */
-  color: white !important;
+  /* color: white !important;
   height: 400px;
   max-width: 100%;
   padding: 10px;
-  
-}
+} */
 
-.meme-card .card-header {
+/* .meme-card .card-header {
   border: none !important;
 }
 
@@ -251,11 +248,7 @@ Cat and Dog backgrounds (moved to Meme.css)
 .form-subheading {
   margin-bottom: 5px; 
   text-align: center; 
-}
-
-
-
-/* ====================================================================================== */
+} */
 
 
 /* ===========================================
