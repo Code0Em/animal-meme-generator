@@ -8,7 +8,7 @@ Background Banner (below Start Again button)
 
 /* Background banners (Cat only) */
 .cat #banner {
-  background-image: url(/images/kitty-yarn.png);
+  background-image: url(images/kitty-yarn.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;
@@ -17,13 +17,11 @@ Background Banner (below Start Again button)
 
 /* Background banners (Dog only) */
 .dog #banner {
-  background-image: url(/images/doggy-bone.png);
+  background-image: url(images/doggy-bone.png);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: top;
   background-size: contain;
-  /* width: 100vw; */
-  /* margin-left: 50px; */
 }
 
 /* =======================================
@@ -40,7 +38,6 @@ Buttons
   font-family: inherit;
   font-weight: 500;
   color: darkblue;
-  /* padding-top: 55px; */
 }
 
 .cat button:hover,
@@ -84,12 +81,9 @@ Meme Wrapper (contains form, text over meme, meme image and breed info)
   width: 90vw;
   position: relative;
   margin: 0;
-  /* padding: 5%; */
-  /* background-color: #FFDE59; */
 }
 
 #top-row {
-  /* background-color: rgba(255,255,255); */
   padding: 2%;
   display: flex;
   align-items: flex-start;
@@ -99,16 +93,14 @@ Meme Wrapper (contains form, text over meme, meme image and breed info)
 /* ==========
 Meme Form
 ============= */
-
+/* card for meme form */
 .meme-card {
   background-color: rgba(112, 145, 207, 0.6) !important;
-  /* background-color: rgba(112, 145, 207) !important; */
   color: white !important;
   height: 400px;
   margin-top: 30px;
   max-width: 100%;
   padding: 10px;
-  /* z-index: -1; */
 }
 
 .meme-card .card-header {
@@ -136,8 +128,6 @@ The Meme
   position: relative;
   text-align: center;
   max-width: 100%;
-  /* padding: 10px;
-  padding-top: 8px; */
   background-color: var(--bg-light-blue);
 }
 
@@ -166,7 +156,7 @@ The Meme
   top: 8%;
 }
 
-/* bottom line is more than top-line because as meme-container includes breed information (so we need to push it above this text) */
+/* Note: bottom line is more than top-line because as meme-container includes breed information (so we need to push it above this text) */
 .meme-bottom-line {
   bottom: 18%;
 }
@@ -190,14 +180,12 @@ The Meme
   padding-top: 8px;
 }
 
-/* ===========================================
+/* ========================
 Card for Storage buttons
-=========================================== */
-
+========================= */
 #meme-storage {
   border: none !important;
   margin-top: 0px;
-  /* margin-top: 30px; */
 }
 
 #local-storage {

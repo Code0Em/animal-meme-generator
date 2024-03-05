@@ -1,3 +1,6 @@
+/* ==============================
+Hero Row (with Start Again button)
+=================================*/
 /* Hero (sets margin top so button isn't covered by Navbar) */
 #hero {
 	margin-top: 100px;
@@ -30,56 +33,3 @@
 		margin-top: 75px;
 	}
 }
-
-
-
-/* :root {
-  --bg-dark-blue: #32658A;
-	--bg-mid-blue: #6D92AD;
-  --bg-light-blue: #b2d5ee;
-	--bg-soft-yellow: #FFDE59;
-}
-
-#restart {
-  background-color: var( --bg-light-blue) !important;
-	padding-left: 3%;
-	margin-top: 70px;
-
-}
-
-#btn-restart {
-	width: fit-content;
-	/* margin-top: 10px; */
-/* border-radius: 50px;
-	border: none; */
-/* margin-bottom: 10px; */
-/* font-size: x-large;
-	padding: 0.6em 1.2em;
-	border: 1px solid transparent;
-	font-weight: 500;
-	font-family: inherit;
-	cursor: pointer;
-	transition: border-color 0.25s;
-	background-color: var(--bg-soft-yellow) !important;
-	color: blue);
-	position: relative !important;
-	margin-top: 20px;
-	text-align: center !important;
-} */
-
-/* #storage-btn {
-	width: fit-content;
-	margin-top: 10px;
-	border-radius: 50px;
-	border: none; */
-/* margin-bottom: 10px; */
-/* font-size: larger;
-	padding: 0.6em 1.2em;
-	border: 1px solid transparent;
-	font-weight: 500;
-	font-family: inherit;
-	cursor: pointer;
-	transition: border-color 0.25s;
-	background-color: #32658A !important;
-	color: white;
-	margin-right: 15px; */
