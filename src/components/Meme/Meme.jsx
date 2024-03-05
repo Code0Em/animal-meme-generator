@@ -54,6 +54,7 @@ const Meme = ({ animalType }) => {
             .catch(error => console.error(`Error fetching ${animalType} images:`, error));
     }, [animalType]);
 
+
     // updates memeText upon user input
     const handleInputChange = (event) => {
         const { name, value } = event.target;
@@ -85,7 +86,7 @@ const Meme = ({ animalType }) => {
 
     // save the current meme to local storage 
     const handleSaveMeme = () => {
-        const newMeme = { topLine: memeText.topLine, bottomLine: memeText.bottomLine, imageUrl: image }; // Store image URL along with meme text
+        const newMeme = { topLine: memeText.topLine, bottomLine: memeText.bottomLine, imageUrl: image, breed: breed, animalType: animalType };
         setSavedMemes(prevMemes => [...prevMemes, newMeme]);
         // update local storage with the updated savedMemes array
         localStorage.setItem('savedMemes', JSON.stringify([...savedMemes, newMeme]));
@@ -95,6 +96,8 @@ const Meme = ({ animalType }) => {
     const handleReloadMeme = (savedMeme) => {
         setMemeText({ topLine: savedMeme.topLine, bottomLine: savedMeme.bottomLine });
         setImage(savedMeme.imageUrl);
+        setBreed(savedMeme.breed);
+        setAnimalType(savedMeme.animalType);
         localStorage.setItem('topLine', savedMeme.topLine);
         localStorage.setItem('bottomLine', savedMeme.bottomLine);
     };
