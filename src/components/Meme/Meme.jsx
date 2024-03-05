@@ -33,7 +33,7 @@ const Meme = ({ animalType }) => {
         fetch(apiUrl, {
             headers: { 'x-api-key': apikeyToUse }
         })
-        // throw error if there is a problem getting the response
+            // throw error if there is a problem getting the response
             .then(response => {
                 if (!response.ok) {
                     throw new Error(`Error fetching ${animalType}`);
@@ -91,12 +91,19 @@ const Meme = ({ animalType }) => {
         localStorage.setItem('savedMemes', JSON.stringify([...savedMemes, newMeme]));
     };
 
-    // reload a saved meme by setting the memeText and imageUrl from a saved meme
+    // reload a savedMeme by setting the memeText and imageUrl from a saved meme
     const handleReloadMeme = (savedMeme) => {
         setMemeText({ topLine: savedMeme.topLine, bottomLine: savedMeme.bottomLine });
         setImage(savedMeme.imageUrl);
         localStorage.setItem('topLine', savedMeme.topLine);
         localStorage.setItem('bottomLine', savedMeme.bottomLine);
+    };
+
+    // remove savedMeme from web page and local storage
+    const handleRemoveMeme = (index) => {
+        const updatedMemes = savedMemes.filter((_, i) => i !== index);
+        setSavedMemes(updatedMemes);
+        localStorage.setItem('savedMemes', JSON.stringify(updatedMemes));
     };
 
     // load saved memes from local storage 
@@ -200,9 +207,15 @@ const Meme = ({ animalType }) => {
                         <Card id="local-storage">
                             <div className="text-center">
                                 {savedMemes.map((savedMeme, index) => (
-                                    <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
-                                        Reload Meme {index + 1}
-                                    </Button>
+                                    <div key={index}>
+                                        <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
+                                            Reload Meme {index + 1}
+                                        </Button>
+                                        {/* remove savedMeme button */}
+                                        <Button variant="danger" onClick={() => handleRemoveMeme(index)}>
+                                            Remove Meme
+                                        </Button>
+                                    </div>
                                 ))}
                             </div>
                         </Card>
