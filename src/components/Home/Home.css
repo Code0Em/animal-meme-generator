@@ -7,7 +7,7 @@ Home (landing page)
   margin: 0%;
   height: 90vh;
   width: 100vw;
-  background-image: url(./images/pets-landing05.png);
+  background-image: url(/public/images/pets-landing05.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
