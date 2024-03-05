@@ -1,10 +1,13 @@
+/* =========
+Footer
+=========== */
 /* Footer background (sets colour) */
 #custom-footer {
-    background-color: #32658A !important;
-  }
+  background-color: #32658A !important;
+}
 
-  /* Footer paragraph (sets font styling) */
-  #custom-footer p {
-   color: white !important;
-   font-family: "ABeeZee", sans-serif !important;
-  }
+/* Footer paragraph (sets font styling) */
+#custom-footer p {
+  color: white !important;
+  font-family: "ABeeZee", sans-serif !important;
+}
