@@ -67,7 +67,7 @@ Following a  Behavior-Driven Development (BDD) methodology, Bark vs. Meow uses [
 
 At the time of publishing this README, all tests pass:
 
-![Screenshot of the terminal displaying test results, shows 4 tests run and all passed](./images/test-passed-screenshot.png)
+![Screenshot of the terminal displaying test results, shows 4 tests run and all passed](./public/images/test-passed-screenshot.png)
 
 ## Contributors
 
