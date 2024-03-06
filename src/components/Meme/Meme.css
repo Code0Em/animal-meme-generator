@@ -69,8 +69,8 @@ Buttons
 }
 
 /* Meme buttons (Reload and Remove meme only) */
-#save-btn,
-#remove-btn {
+.save-btn,
+.remove-btn {
   margin-bottom: 10px;
 }
 
