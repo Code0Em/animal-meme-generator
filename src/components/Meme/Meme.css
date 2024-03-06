@@ -78,7 +78,7 @@ Buttons
 Meme Wrapper (contains form, text over meme, meme image and breed info)
 ================================================================== */
 #meme-wrapper {
-  min-height: calc(100vh - 185px);
+  min-height: calc(100vh - 223px);
   width: 90vw;
   position: relative;
   margin: 0;
@@ -199,6 +199,14 @@ Cards for Storage buttons
 #meme-storage {
   border: none !important;
   margin-top: 0px;
+}
+
+#reload-memes {
+  border: none !important;
+}
+
+#remove-memes {
+  border: none !important;
 }
 
 /* ==============
