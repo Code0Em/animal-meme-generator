@@ -17,7 +17,6 @@ const Meme = ({ animalType }) => {
     const [breedWikiUrl, setBreedWikiUrl] = useState('');
     const [temperament, setTemperament] = useState('');
     const [loading, setLoading] = useState(true);
-    // States for meme text colour change (inc the button)
     const [textColor, setTextColor] = useState('meme-text-light')
     const [btnTheme, setBtnTheme] = useState('dark')
     const [btnText, setBtnText] = useState('Dark')
@@ -122,12 +121,12 @@ const Meme = ({ animalType }) => {
         setMemeText({ topLine: "", bottomLine: "" });
     }, []);
 
-    // return structured JSX - image currently restricted to 300px width (this can be changed), also returns cat breed as URL link to Wiki page
+    // return structured JSX
     return (
         <>
             <Container fluid id='meme-wrapper'>
 
-                {/*  -------------------------ROW CONTAINING FORM AND MEME CARD---------------------------------------------------------  */}
+                {/*  -------------------------ROW CONTAINING FORM AND MEME CARD-----------------------------------------------  */}
                 <Row id="banner"></Row>
                 <Row id="top-row" className="d-flex flex-row align-self-start">
                     <Col xs={12} md={12} lg={6}>
@@ -165,7 +164,7 @@ const Meme = ({ animalType }) => {
                                     </Form.Group>
                                 </Form>
 
-                                {/*  ------------------------------ BUTTONS FOR LIGHTER TEXT & SAVE MEME---------------------------------------------------------  */}
+                                {/*  ------------------------- BUTTONS FOR LIGHTER TEXT & SAVE MEME-------------------  */}
 
                                 <section className="col-lg">
                                     <Button variant={btnTheme} onClick={handleColorChange}><i className="bi bi-lightbulb"></i>  {btnText} Text</Button>{' '}
@@ -177,7 +176,7 @@ const Meme = ({ animalType }) => {
 
                     {/*  ----------------------------------CARD FOR GENERATED MEME --------------------------------------------------  */}
 
-                    <Col className="col-lg-6">
+                    <Col lg={6}>
                         <Card id='meme-storage'>
                             {loading ? (
                                 <p className="text-center">Anything is paw-sible!</p>
@@ -202,16 +201,16 @@ const Meme = ({ animalType }) => {
                         </Card>
                     </Col>
                 </Row>
-                {/*  --------------------------------LOCAL STORAGE BUTTONS----------------------------------------------------  */}
+                {/*  --------------------------------LOCAL STORAGE BUTTONS-----------------------------------------------  */}
 
                 {/* reload button for savedMeme */}
-                <Row>
-                    <Col>
-                        <Card id="local-storage">
-                            <div className="text-center">
+                <Row id="local-storage">
+                    <Col lg={6}>
+                        <Card>
+                            <div>
                                 {savedMemes.map((savedMeme, index) => (
-                                    <div key={index}>
-                                        <Button id="storage-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
+                                    <div className="text-center storage-btns" key={index}>
+                                        <Button className="save-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
                                             Reload Meme {index + 1}
                                         </Button>
 
@@ -220,15 +219,15 @@ const Meme = ({ animalType }) => {
                             </div>
                         </Card>
                     </Col>
-                </Row>
+              
                 {/* Remove savedMeme section */}
-                <Row>
-                    <Col>
+               
+                    <Col lg={6}>
                         <Card id="remove-memes">
-                            <div className="text-center">
+                            <div>
                                 {savedMemes.map((savedMeme, index) => (
-                                    <div key={index}>
-                                        <Button variant="danger" onClick={() => handleRemoveMeme(index)}>
+                                    <div className="text-center storage-btns" key={index}>
+                                        <Button className="remove-btn" onClick={() => handleRemoveMeme(index)}>
                                             Remove Meme {index + 1}
                                         </Button>
                                     </div>

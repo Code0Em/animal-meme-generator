@@ -68,8 +68,9 @@ Buttons
   cursor: url(http://www.zingerbugimages.com/cursors/catscratch2.ani), url(http://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
 }
 
-/* Meme buttons (Reload meme only) */
-#storage-btn {
+/* Meme buttons (Reload and Remove meme only) */
+.save-btn,
+.remove-btn {
   margin-bottom: 10px;
 }
 
@@ -156,7 +157,7 @@ The Meme
   top: 8%;
 }
 
-/* Note: bottom line is more than top-line because as meme-container includes breed information (so we need to push it above this text) */
+/* Note: bottom-line is more than top-line because the meme-container includes breed information (underneath the bottom-line) so we need to push the bottom-line higher so it's above breed information. */
 .meme-bottom-line {
   bottom: 18%;
 }
@@ -181,25 +182,31 @@ The Meme
 }
 
 /* ========================
-Card for Storage buttons
+Cards for Storage buttons
 ========================= */
+/* Row for Reload and Remove buttons */
+#local-storage {
+  background-color: var(--bg-light-blue);
+  border: none !important;
+}
+
+/* Row for Reload and Remove buttons */
+.storage-btns {
+  background-color: var(--bg-light-blue);
+}
+
+/* Card for Reload buttons only */
 #meme-storage {
   border: none !important;
   margin-top: 0px;
 }
 
-#local-storage {
-  background-color: var(--bg-light-blue);
-  padding: 3%;
-  border: none !important;
-}
-
 /* ==============
 Media Queries
 =================== */
-/* Sets button so remain oval shaped on smaller screens */
 @media screen and (max-width: 1004px) {
 
+  /* Sets Dog and Cat buttons so they remain oval shaped on smaller screens */
   .cat button,
   .dog button {
     padding: 0.3em 2.6em;
@@ -215,6 +222,7 @@ Media Queries
 
 @media screen and (max-width: 692px) {
 
+  /* Keeps bottom line of text over meme image */
   .meme-bottom-line {
     bottom: 25%;
   }
@@ -222,7 +230,16 @@ Media Queries
 
 @media screen and (max-width: 517px) {
 
+  /* Keeps bottom line of text over meme image */
   .meme-bottom-line {
     bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 991px) {
+
+  /* Adds margin to Card for Remove Memes button (so there is gap when these buttons become stacked) */
+  #remove-memes {
+    margin-top: 20px;
   }
 }
