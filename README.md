@@ -20,8 +20,6 @@ This project fullfils the criteria of building a a performant and scalable front
 
 Bark vs. Meow makes use of two APIs which provide images and associated breed information to the application: [TheCatAPI](https://thecatapi.com) and [TheDogAPI](https://www.thedogapi.com).
 
-![Screenshot of the website] [TO ADD]
-
 ## Design
 
 Initial wireframe and design stages
@@ -43,7 +41,7 @@ Mac screenshots, dog pages
 
 ## Usage
 
-Access the deployed application at the following URL: [TO ADD]
+Access the deployed application at the following URL: https://animal-meme-generator.netlify.app
 
 Bark vs. Meow runs in the browser and allows users to generate a new meme via a button depending on their preference: a cat or a dog. The associated API is then called and returns an image along with associated breed information. The user can then populate the meme with any text of their choice.
 
@@ -85,7 +83,7 @@ yasmiinanon: https://github.com/yasmiinanon
 
 ### Design Resources
 
-* **Wireframe**: ??????
+* **Wireframe**: Figma
 * **Colour Pallete**: Coolors (no date) [*The super fast color palettes generator!*](https://coolors.co/).
 * **Colour Contrast Checker**: Accessibility Checker (no date) [*Accessibility Color Contrast Checker WCAG Compliance*](https://www.accessibilitychecker.org/color-contrast-checker/).
 
