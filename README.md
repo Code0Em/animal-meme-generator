@@ -24,7 +24,22 @@ Bark vs. Meow makes use of two APIs which provide images and associated breed in
 
 ## Design
 
-*Wireframes, colour pallete etc to add*
+Initial wireframe and design stages
+![Design studies](./images/--designStudies.jpg)
+
+Landing Page, mobile and Desktop
+![Landing Page, mobile and Desktop](./images/--designLanding.jpg)
+
+Android screenshots, meme pages
+![Android screenshots, meme components](./images/--screenAndroid-Meme.jpg)
+
+Mac screenshots, cat page
+![Mac screenshots, cat component](./images/--screenMacCatMeme.jpg)
+
+Mac screenshots, dog pages
+![Mac screenshots, dog component](./images/--screenMacDogMeme.jpg)
+
+
 
 ## Usage
 
@@ -38,7 +53,7 @@ Bark vs. Meow has an aesthetically pleasing and accessible user interface which 
 
 ## Built with<a id='build'></a>
 
-![Static Badge](https://img.shields.io/badge/HTML-blue) ![Static Badge](https://img.shields.io/badge/CSS-blue) ![Static Badge](https://img.shields.io/badge/Bootstrap-blue) ![Static Badge](https://img.shields.io/badge/JavaScript-blue) ![Static Badge](https://img.shields.io/badge/React-blue) ![Static Badge](https://img.shields.io/badge/Node.js-blue)
+![Static Badge](https://img.shields.io/badge/HTML-blue) ![Static Badge](https://img.shields.io/badge/CSS-blue) ![Static Badge](https://img.shields.io/badge/Bootstrap-blue) ![Static Badge](https://img.shields.io/badge/JavaScript-blue) ![Static Badge](https://img.shields.io/badge/React-blue) ![Static Badge](https://img.shields.io/badge/Node.js-blue) ![Static Badge](https://img.shields.io/badge/Figma-blue) ![Static Badge](https://img.shields.io/badge/Canva-blue)
 
 ## Testing
 
