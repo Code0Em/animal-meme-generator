@@ -206,7 +206,7 @@ const Meme = ({ animalType }) => {
                 {/* reload button for savedMeme */}
                 <Row id="local-storage">
                     <Col lg={6}>
-                        <Card>
+                        <Card id="reload-memes">
                             <div>
                                 {savedMemes.map((savedMeme, index) => (
                                     <div className="text-center storage-btns" key={index}>
