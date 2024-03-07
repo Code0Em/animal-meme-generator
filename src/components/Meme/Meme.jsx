@@ -210,7 +210,7 @@ const Meme = ({ animalType }) => {
                             <div>
                                 {savedMemes.map((savedMeme, index) => (
                                     <div className="text-center storage-btns" key={index}>
-                                        <Button className="save-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}><i className="bi bi-repeat"></i> Remove Meme {index + 1}
+                                        <Button className="save-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}><i className="bi bi-repeat"></i> Reload Meme {index + 1}
                                         </Button>
                                     </div>
                                 ))}
