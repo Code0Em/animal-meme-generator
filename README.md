@@ -83,9 +83,19 @@ yasmiinanon: https://github.com/yasmiinanon
 
 ### Design Resources
 
-* **Wireframe**: Figma
-* **Colour Pallete**: Coolors (no date) [*The super fast color palettes generator!*](https://coolors.co/).
-* **Colour Contrast Checker**: Accessibility Checker (no date) [*Accessibility Color Contrast Checker WCAG Compliance*](https://www.accessibilitychecker.org/color-contrast-checker/).
+* **Wireframe**: [Figma.com](https://www.figma.com/).
+* **Meme references**: [KnowYourMeme](https://knowyourmeme.com/).
+* **Colour Pallete**: Coolors (2024-03-02) [*The super fast color palettes generator!*](https://coolors.co/).
+* **Colour Contrast Checker**: Accessibility Checker (2024-03-02) [*Accessibility Color Contrast Checker WCAG Compliance*](https://www.accessibilitychecker.org/color-contrast-checker/).
+* **Paw-shaped cursors**: [Zingerbug.com](https://www.zingerbug.com/cursors/animals/index.htm).
+* **Typefaces**:
+  - [Lilita One designed by Juan Montoreano on Google Fonts](https://fonts.google.com/specimen/Lilita+One)
+  - [ABeeZee designed by Anja Meiners on Google Fonts](https://fonts.google.com/specimen/ABeeZee).
+* **Icons**: [Icon Duck](https://iconduck.com/). 
+* **Images and styling elements**: 
+  - [**Canva.com**](https://www.canva.com/) 
+  - [**Freepik.com**](https://www.freepik.com).
+
 
 ### Technologies
 
