@@ -96,7 +96,7 @@ const Meme = ({ animalType }) => {
         setMemeText({ topLine: savedMeme.topLine, bottomLine: savedMeme.bottomLine });
         setImage(savedMeme.imageUrl);
         setBreed(savedMeme.breed);
-        setAnimalType(savedMeme.animalType);
+        // setAnimalType(savedMeme.animalType);
         localStorage.setItem('topLine', savedMeme.topLine);
         localStorage.setItem('bottomLine', savedMeme.bottomLine);
     };
@@ -210,25 +210,22 @@ const Meme = ({ animalType }) => {
                             <div>
                                 {savedMemes.map((savedMeme, index) => (
                                     <div className="text-center storage-btns" key={index}>
-                                        <Button className="save-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}>
-                                            Reload Meme {index + 1}
+                                        <Button className="save-btn" key={index} onClick={() => handleReloadMeme(savedMeme)}><i className="bi bi-repeat"></i> Remove Meme {index + 1}
                                         </Button>
-
                                     </div>
                                 ))}
                             </div>
                         </Card>
                     </Col>
-              
-                {/* Remove savedMeme section */}
-               
+
+                    {/* Remove savedMeme section */}
+
                     <Col lg={6}>
                         <Card id="remove-memes">
                             <div>
                                 {savedMemes.map((savedMeme, index) => (
                                     <div className="text-center storage-btns" key={index}>
-                                        <Button className="remove-btn" onClick={() => handleRemoveMeme(index)}>
-                                            Remove Meme {index + 1}
+                                        <Button className="remove-btn" onClick={() => handleRemoveMeme(index)}><i className="bi bi-trash"></i> Remove Meme {index + 1}
                                         </Button>
                                     </div>
                                 ))}

@@ -74,6 +74,14 @@ Buttons
   margin-bottom: 10px;
 }
 
+.bi.bi-repeat, .bi.bi-trash {
+  margin-right: 10px;
+  font-size: large;
+}
+
+.bi::before, [class^="bi-"]::before, [class*=" bi-"]::before {
+  font-weight: bold !important;
+}
 /* ===============================================================
 Meme Wrapper (contains form, text over meme, meme image and breed info)
 ================================================================== */
