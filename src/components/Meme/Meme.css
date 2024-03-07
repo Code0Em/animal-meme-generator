@@ -59,13 +59,13 @@ Buttons
 /* Meme buttons (Dog only) */
 .dog button {
   background-color: yellow;
-  cursor: url(https://www.zingerbugimages.com/cursors/paws1.ani), url(http://www.zingerbug.com/cursors/cursors/paws1.gif), progress !important;
+  cursor: url(https://www.zingerbugimages.com/cursors/paws1.ani), url(https://www.zingerbug.com/cursors/cursors/paws1.gif), progress !important;
 }
 
 /* Meme buttons (Cat only) */
 .cat button {
   background-color: orange;
-  cursor: url(https://www.zingerbugimages.com/cursors/catscratch2.ani), url(http://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
+  cursor: url(https://www.zingerbugimages.com/cursors/catscratch2.ani), url(https://www.zingerbug.com/cursors/cursors/catscratch2.gif), progress !important;
 }
 
 /* Meme buttons (Reload and Remove meme only) */
